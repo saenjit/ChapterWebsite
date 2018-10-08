@@ -1,0 +1,292 @@
+div {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+
+  box-sizing: border-box;
+}
+/*****  COLORS AND FONTS  ******/
+h1,
+h2,
+h3,
+h6,
+h5,
+h4,
+p {
+  font-family: "Lato", "Helvetica", Arial, sans-serif;
+  color: #383838;
+  font-weight: normal;
+}
+.gold {
+  color: #a29061;
+}
+.script {
+  font-family: "Petit Formal Script", cursive;
+  font-size: 110%;
+  color: #a29061;
+}
+.bold {
+  font-weight: bold;
+}
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 16px;
+}
+h5 {
+  font-size: 14px;
+}
+h6 {
+  font-size: 13px;
+}
+p {
+  font-size: 12px;
+  color: #787878;
+}
+/********** LINKS ************/
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+}
+/*********** MENUS *************/
+ul.horizontal * {
+  display: inline;
+  margin-left: 20px;
+}
+ul.horizontal li.first,
+ul.horizontal li.first a {
+  margin-left: 0 !important;
+}
+ul {
+  list-style: none;
+}
+nav ul li a {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: normal;
+  color: #686A5B;
+}
+nav ul li a.active {
+  font-weight: bold;
+  color: #a29061;
+}
+nav ul li a:hover {
+  text-decoration: none;
+  color: black;
+}
+/********* FOOTER ************/
+footer div.row {
+  margin-top: 20px;
+  padding-top: 0;
+  border-top: 1px solid #B0B0B0;
+}
+.contacts h6,
+.contacts a,
+.contacts h5 {
+  margin: 0;
+}
+.contacts h6 {
+  margin-bottom: -10px;
+  margin-top: -7px;
+}
+.contacts a {
+  margin-bottom: 10px;
+}
+ul.footer li {
+  margin-left: 0;
+  margin-bottom: -8px;
+}
+ul.footer li a {
+  font-size: 12px;
+}
+.socialfooter a {
+  display: inline;
+}
+.socialfooter a img {
+  margin: 0;
+  display: inline;
+  margin-right: 5px;
+}
+a.email {
+  margin-top: -10px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #747474;
+}
+a.email:hover {
+  color: #a29061;
+}
+/********** STYLING ***********/
+.infobar {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: #DFDFDF;
+  border-bottom: 1px solid #ACACAC;
+}
+span.info {
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+body {
+  background-color: #EFEFED;
+}
+header {
+  position: relative;
+  height: 154px;
+  background-image: url("../images/logoNJIT.jpg");
+  background-repeat: no-repeat;
+  background-position: center -39px;
+  background-size: 70%;
+}
+nav {
+  position: absolute;
+  bottom: 5px;
+  text-align: center;
+}
+nav ul {
+  margin: 0;
+  width: auto;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+nav ul li a {
+  font-size: 11px;
+}
+section.patterned {
+  padding-top: 30px;
+  padding-bottom: -150px;
+  border-top: 1px solid white;
+  height: 300px;
+  background-image: url("../images/fleur.png");
+  background-position: fixed;
+  background-color: #272727;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.patterned img {
+  
+  width: 90%;
+  height: auto;
+  border-radius: 0;
+  border: 5px solid white;
+  -moz-box-shadow: 0 10px 5px #888;
+  -webkit-box-shadow: 0 10px 5px #888;
+  box-shadow: 0 10px 5px #888;
+}
+.patterned {
+  height: 350px;
+}
+.content {
+  padding-top: 60px;
+}
+/*
+.frame {
+	position: relative;
+	margin-top: 20px;
+	height: 400px;
+	width: 100%;
+}
+
+.frame ul {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+}
+
+.frame ul li {
+	position: absolute;
+	top:0;
+	width: inherit;
+	height: inherit;
+	background-color: white;
+	display:inline;
+	margin-left:0;
+}
+
+.frame ul li a {
+	width: inherit;
+	height: inherit;
+	padding:0;
+}
+
+.frame ul li a img {
+	margin-top: -100px;
+	position:relative;
+	width: 100%;
+}
+*/
+.sidebar {
+  margin-top: 20px;
+  background-color: #F9F9F9;
+  padding: 20px;
+}
+.infobar {
+  margin-top: 0;
+}
+.activesBtn {
+  background-color: #a29061;
+  width: 115px;
+  color: white;
+  font-size: 7px;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  padding: 5px;
+  border-radius: 4px;
+}
+nav li a[href="donate.php"] {
+  color: #a29061;
+  padding: 8px;
+  border: 1px solid #a29061;
+}
+.inescutcheon {
+  height: 40px;
+  width: 35px;
+  margin-right: 3px;
+  display: inline-block;
+  background-size: 100%;
+  vertical-align: middle;
+  background-image: url('../images/inescutcheon.png');
+  background-repeat: no-repeat;
+}
+.sidebar .bold {
+  border-bottom: 1px solid #7f7f7f;
+  margin-top: 10px;
+  margin-bottom: 10px !important;
+}
+.sidebar p {
+  margin-bottom: 6px;
+}
+.attendees {
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow: hidden;
+}
+.donateBtn {
+  background-color: #a29061;
+  width: 300px;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  line-height: 3;
+  letter-spacing: 1px;
+  padding: 5px;
+  border-radius: 4px;
+  text-align: center;
+}
+

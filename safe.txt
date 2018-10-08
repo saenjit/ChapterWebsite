@@ -1,0 +1,15 @@
+<div>
+    <p>
+        Here are some quick and useful links:
+        <br>
+        <a href = "http://sae.net" target="_blank">SAE</a> - Nationals Website
+        <br>
+        <a href = "http://thetgi.sae.net" target="_blank">SAE Modules</a> - Modules Website
+        <br>
+        <a href = "http://omegafi.com" target="_blank">OmegaFi</a> - Where to pay dues, answer polls or look at the calendar
+        <br>
+        <a href = "http://drive.google.com" target="_blank">Google Drive</a> - Access the SAE NJ Iota Tau Drive
+        <br>
+        <a href = "https://uisapppr3.njit.edu/scbldr/" target="_blank">NJIT Schedule Builder</a> - Just cause they don't own NJIT.xyz anymore
+    </p>
+</div>

@@ -1,0 +1,160 @@
+.patterned {
+    position: relative;
+}
+.rushbutton {
+    opacity: 0;
+    position: absolute;
+    width: 33%;
+    left: 33%;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    background-color: #55a7b2; 
+    border: 1px solid #4c98a4;
+    border-radius: 3px;
+    margin-top: -50px;
+    font-size: 100%;
+    transition: all 200ms;
+    top: 50%;
+    cursor: pointer;
+}
+.patterned:hover .rushbutton {
+    margin-top: 0;
+    opacity: 1;
+
+}
+
+.housingbutton {
+    /*opacity: 0.5;*/
+    /*position: relative;*/
+    background-color: #777777;
+    width: 80%;
+    padding-top: 80px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2px;
+    font-size: 100%;
+    /*transition: opacity 200ms;*/
+    /*top: 50%;*/
+}
+
+/*These settings change the size of the picture on that specific page*/
+
+.cover {
+    max-width:50% !important;
+    /*height:auto;*/
+    /*display:block;*/
+}
+.coverRush {
+    max-width:80% !important;
+    /*height:auto;*/
+    /*display:block;*/
+}
+.coverHistory{
+    max-width:60% !important;
+    /*height:auto;*/
+    /*display:block;*/
+}
+.coverMemberLogin{
+    max-width:75% !important;
+    /*height:auto;*/
+    /*display:block;*/
+}
+.coverMemberPage{
+    max-width:90% !important;
+    /*height:auto;*/
+    /*display:block;*/
+}
+.coverBrother{
+    max-width:50% !important;
+    /*height:auto;*/
+    /*display:block;*/
+}
+.coverAlumni{
+    max-width:70% !important;
+    /*height:auto;*/
+    /*display:block;*/
+}
+.coverWebmaster{
+    max-width:45% !important;
+    /*height:auto;*/
+    /*display:block;*/
+}
+.coverFamilyTree{
+    max-width:93% !important;
+    /*height:auto;*/
+    /*display:block;*/
+}
+.coverWebmasterLogin{
+    max-width:55% !important;
+    /*height:auto;*/
+    /*display:block;*/
+}
+
+/*---------------------------------------------------------------*/
+
+.socialMediaIcons{
+    padding-left:30px;
+}
+
+.brotherRow{
+    width: 91.3%; 
+    margin-right:4.35%;
+    clear: left;
+}
+
+#brotherSection{
+    background-color: #cbcbcb;
+    display: block;
+}
+
+.brotherTable{
+    width:1005;
+    table-layout: fixed;
+}
+
+.tablePic{
+    float: left;
+}
+
+.brotherDescription{
+    padding-left: 300px;
+    width 100%;
+}
+
+.brotherName{
+    font-family: "Petit Formal Script", cursive;
+    font-size: 110%;
+    color: #a29061;
+    float:right;
+    text-align: right;
+}
+.updateTable{
+    text-align: center;
+    border-radius: 15px;
+    background-color: #d1cfcf;
+    padding-bottom: 10px;
+}
+
+.positionsTable{
+    text-align: center;
+}
+
+.memberLinks{
+    background-color:#e5d26f;
+    border-radius: 15px;
+    padding-left: 20px;
+}
+
+
+/*
+#updatesWebmaster {display: none;}
+#homeWebmaster {display: none;}
+#rushWebmaster {display: none;}
+#historyWebmaster {display: none;}
+#positionsWebmaster {display: none;}
+#footerWebmaster {display: none;}
+#usefulDocumentsWebmaster {display: none;}*/
