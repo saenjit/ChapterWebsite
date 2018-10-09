@@ -87,7 +87,8 @@
                     <!--STATUS OFFLINE-->
                     <style>
                         #status{
-                            background-color: #2fb50f;
+                            background-color: #ea7816;
+                                /*#2fb50f*/
                             /*background-color:#ea7816;*/
                             width: 115px;
                             color: white;
@@ -100,10 +101,9 @@
                         }
                     </style>
                     <div id = status>
-                        Online
-                        <!--
+                        <!--Online-->
                         Online, but Under Maintanence
-                        Offline
+                        <!--Offline
                         -->
                     </div>
 					
