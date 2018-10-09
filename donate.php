@@ -93,12 +93,6 @@
                                     <div class = "donateBtn">DONATE via PAYPAL</div>
                                 </a>
                             </div>
-                            <br>
-                            <div align = center>
-                                <a href="https://www.venmo.com/SAENJIT">
-                                    <div class = "donateBtn">DONATE via VENMO</div>
-                                </a>
-                            </div>
                         </div>
 				</div>
 				<div class="col_2 last"><div style="housingbutton">&nbsp;
