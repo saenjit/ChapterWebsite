@@ -111,26 +111,7 @@
                     
                     <!------------------------------------------------>
                    
-                    <div class="row">
-                <div class="col_2">
-                    <div class = "updateTable">
-                        <h3 class = "script" align = center><u>Updates:</u></h3>
-                        <p>
-                            <?php
-                                $homepage = file_get_contents("motd.txt");
-                                echo $homepage;
-                            ?>
-                        </p>
-                    </div>
-                </div>
 				<div class="col_8">
-					<p><br></p>
-					<h4 class="script" align = center>
-						<div class="inescutcheon">&nbsp;</div>
-						Welcome Webmaster!
-                        <div class="inescutcheon">&nbsp;</div>
-					</h4>
-                    <hr>
                     <div style = "display: inline-block;">
 					<p>
 						This will edit the Updates Section on every page:
