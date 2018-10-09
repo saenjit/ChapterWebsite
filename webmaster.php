@@ -111,50 +111,217 @@
                     
                     <!------------------------------------------------>
                    
-                    <?php 
-                        $fn = "motd.txt"; 
-                        $file = fopen($fn, "w+"); 
-                        $size = filesize($fn); 
-
-                        if($_POST['addition']) fwrite($file, $_POST['addition']); 
-
-                        $text = fread($file, $size); 
-                        fclose($file); 
-                    ?> 
-                    
-                    <form action="<?=$PHP_SELF?>" method="post"> 
-                    <textarea><?=$text?></textarea><br/> 
-                    <input type="text" name="addition"/> 
-                    <input type="submit"/> 
-                    </form>
-                    
-                    
-                    <h2>MOTD</h2>
-                    <? 
-                    if($_POST['Submit']){ 
-                        $open = fopen("motd.txt","w+"); 
-                        $text = $_POST['update']; 
-                        fwrite($open, $text); 
-                        fclose($open); 
-                        echo "File updated.<br />";  
-                        echo "File:<br />"; 
-                        $file = file("motd.txt"); 
-                        foreach($file as $text) { 
+                    <div class="row">
+                <div class="col_2">
+                    <div class = "updateTable">
+                        <h3 class = "script" align = center><u>Updates:</u></h3>
+                        <p>
+                            <?php
+                                $homepage = file_get_contents("motd.txt");
+                                echo $homepage;
+                            ?>
+                        </p>
+                    </div>
+                </div>
+				<div class="col_8">
+					<p><br></p>
+					<h4 class="script" align = center>
+						<div class="inescutcheon">&nbsp;</div>
+						Welcome Webmaster!
+                        <div class="inescutcheon">&nbsp;</div>
+					</h4>
+                    <hr>
+                    <div style = "display: inline-block;">
+					<p>
+						This will edit the Updates Section on every page:
+                    </p>
+                        <p>
+                        <?php
+                            if($_POST['Submit']){ 
+                            $open = fopen("motd.txt","w+"); 
+                            $text = $_POST['update']; 
+                            fwrite($open, $text); 
+                            fclose($open); 
+                            echo "Updates Section updated to:<br />";
+                            $file = file("motd.txt"); 
+                            foreach($file as $text) { 
                             echo $text."<br />"; 
-                        } 
-                    }
-                    else{ 
-                        $file = file("motd.txt"); 
-                        echo "<form action=\"".$PHP_SELF."\" method=\"post\">"; 
-                        echo "<textarea Name=\"update\" cols=\"50\" rows=\"10\">"; 
-                        foreach($file as $text) { 
+                            } 
+                            }else{ 
+                            $file = file("motd.txt"); 
+                            echo "<form action=\"".$PHP_SELF."\" method=\"post\">"; 
+                            echo "<textarea Name=\"update\" cols=\"50\" rows=\"15\">"; 
+                            foreach($file as $text) { 
                             echo $text; 
-                        }  
-                        echo "</textarea>"; 
-                        echo "<input name=\"Submit\" type=\"submit\" value=\"Update\" />\n 
-                        </form>"; 
-                    } 
-                    ?>
+                            }  
+                            echo "</textarea>"; 
+                            echo "<input name=\"Submit\" type=\"submit\" value=\"Update\" />\n 
+                            </form>"; 
+                            } 
+                        ?>
+                        </p>
+                    </div>
+                    
+                    <div style = "float:right;">
+                    <p>
+						This will edit the text on the Home Page:
+                    </p>
+                        <p>
+                        <?php
+                            if($_POST['Submit']){ 
+                            $open = fopen("home.txt","w+"); 
+                            $text = $_POST['update']; 
+                            fwrite($open, $text); 
+                            fclose($open); 
+                            echo "Updates Section updated to:<br />";
+                            $file = file("home.txt"); 
+                            foreach($file as $text) { 
+                            echo $text."<br />"; 
+                            } 
+                            }else{ 
+                            $file = file("home.txt"); 
+                            echo "<form action=\"".$PHP_SELF."\" method=\"post\">"; 
+                            echo "<textarea Name=\"update\" cols=\"50\" rows=\"15\">"; 
+                            foreach($file as $text) { 
+                            echo $text; 
+                            }  
+                            echo "</textarea>"; 
+                            echo "<input name=\"Submit\" type=\"submit\" value=\"Update\" />\n 
+                            </form>"; 
+                            } 
+                        ?>
+                        </p>
+                    </div>
+                    <hr>
+                    <div style = "display: inline-block;">
+					<p>
+						This will edit the text on the Rush Page:
+                    </p>
+                        <p>
+                        <?php
+                            if($_POST['Submit']){ 
+                            $open = fopen("rush.txt","w+"); 
+                            $text = $_POST['update']; 
+                            fwrite($open, $text); 
+                            fclose($open); 
+                            echo "Updates Section updated to:<br />";
+                            $file = file("rush.txt"); 
+                            foreach($file as $text) { 
+                            echo $text."<br />"; 
+                            } 
+                            }else{ 
+                            $file = file("rush.txt"); 
+                            echo "<form action=\"".$PHP_SELF."\" method=\"post\">"; 
+                            echo "<textarea Name=\"update\" cols=\"50\" rows=\"15\">"; 
+                            foreach($file as $text) { 
+                            echo $text; 
+                            }  
+                            echo "</textarea>"; 
+                            echo "<input name=\"Submit\" type=\"submit\" value=\"Update\" />\n 
+                            </form>"; 
+                            } 
+                        ?>
+                        </p>
+                    </div>
+                    
+                    <div style = "float:right;">
+                    <p>
+						This will edit the text on the History Page:
+                    </p>
+                        <p>
+                        <?php
+                            if($_POST['Submit']){ 
+                            $open = fopen("history.txt","w+"); 
+                            $text = $_POST['update']; 
+                            fwrite($open, $text); 
+                            fclose($open); 
+                            echo "Updates Section updated to:<br />";
+                            $file = file("history.txt"); 
+                            foreach($file as $text) { 
+                            echo $text."<br />"; 
+                            } 
+                            }else{ 
+                            $file = file("history.txt"); 
+                            echo "<form action=\"".$PHP_SELF."\" method=\"post\">"; 
+                            echo "<textarea Name=\"update\" cols=\"50\" rows=\"15\">"; 
+                            foreach($file as $text) { 
+                            echo $text; 
+                            }  
+                            echo "</textarea>"; 
+                            echo "<input name=\"Submit\" type=\"submit\" value=\"Update\" />\n 
+                            </form>"; 
+                            } 
+                        ?>
+                        </p>
+                    </div>
+                    <hr>
+                    <div style = "display: inline-block;">
+					<p>
+						This will edit all of the Positions on the Positions Page:
+                        <br>
+                        (Just look through the code and you'll find the people to replace.)
+                    </p>
+                        <p>
+                        <?php
+                            if($_POST['Submit']){ 
+                            $open = fopen("positions.txt","w+"); 
+                            $text = $_POST['update']; 
+                            fwrite($open, $text); 
+                            fclose($open); 
+                            echo "Updates Section updated to:<br />";
+                            $file = file("positions.txt"); 
+                            foreach($file as $text) { 
+                            echo $text."<br />"; 
+                            } 
+                            }else{ 
+                            $file = file("positions.txt"); 
+                            echo "<form action=\"".$PHP_SELF."\" method=\"post\">"; 
+                            echo "<textarea Name=\"update\" cols=\"50\" rows=\"15\">"; 
+                            foreach($file as $text) { 
+                            echo $text; 
+                            }  
+                            echo "</textarea>"; 
+                            echo "<input name=\"Submit\" type=\"submit\" value=\"Update\" />\n 
+                            </form>"; 
+                            } 
+                        ?>
+                        </p>
+                    </div>
+                    
+                    <div style = "float:right;">
+                    <p>
+						This will edit the Footer at the bottom of the page:
+                        <br>
+                        (EA & EDA)
+                        
+                    </p>
+                        <p>
+                        <?php
+                            if($_POST['Submit']){ 
+                            $open = fopen("footer.txt","w+"); 
+                            $text = $_POST['update']; 
+                            fwrite($open, $text); 
+                            fclose($open); 
+                            echo "Updates Section updated to:<br />";
+                            $file = file("footer.txt"); 
+                            foreach($file as $text) { 
+                            echo $text."<br />"; 
+                            } 
+                            }else{ 
+                            $file = file("footer.txt"); 
+                            echo "<form action=\"".$PHP_SELF."\" method=\"post\">"; 
+                            echo "<textarea Name=\"update\" cols=\"50\" rows=\"15\">"; 
+                            foreach($file as $text) { 
+                            echo $text; 
+                            }  
+                            echo "</textarea>"; 
+                            echo "<input name=\"Submit\" type=\"submit\" value=\"Update\" />\n 
+                            </form>"; 
+                            } 
+                        ?>
+                        </p>
+                    </div>
+                    <hr>
                     
                     
                     
