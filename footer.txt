@@ -5,13 +5,13 @@
     Chapter President
 </h5>
 <h6>
-    Ardian Djombalic
-</h6>
-<a href="mailto:ad462@njit.edu" class="email">Email</a>
-<h5 class="bold">
-    Webmaster
-</h5>
-<h6>
     Todd Murphy
 </h6>
 <a href="mailto:tam44@njit.edu" class="email">Email</a>
+<h5 class="bold">
+    Vice President
+</h5>
+<h6>
+    Alexander Anton
+</h6>
+<a href="mailto:aja44@njit.edu" class="email">Email</a>
