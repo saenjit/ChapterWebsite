@@ -59,7 +59,7 @@
 			<div class="frame row">
         <!--<a class="rushbutton" href="RushCalendarFall2014_fixed.pdf">Download the 2014 Rush Calendar</a>-->
 				<!-- <img src="images/RushCover2016.png" class="cover"> -->
-				<img src="images/topsecret.jpeg" class="coverMemberPage">
+				<img src="images/PUBG.JPG" class="coverMemberPage">
 			</div>
 		</section>
 		<section class="content" style="padding-top:20px;">
