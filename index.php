@@ -79,7 +79,7 @@
 				</div>
                 
                 <script> 
-                        alert("Yes, the website is back... A new version is underway. Stay Tuned... -Todd");
+                        alert("To preview the new site, go to saenjit.com/new -Todd");
                 </script>
                 
                 
