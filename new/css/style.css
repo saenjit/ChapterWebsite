@@ -2343,3 +2343,11 @@ span.email-notes {
 /*----------------------------------------
  .End CSS
 ----------------------------------------*/
+/*Todd CSS*/
+.twoPositionsName{
+    line-height: 19px;
+}
+.twoPositions{
+    line-height: 15px;
+}
+
