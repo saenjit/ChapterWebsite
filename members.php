@@ -85,7 +85,7 @@
 									</button>
                 <!-- Brand -->
                 <a class="navbar-brand page-scroll sticky-logo" href="index.html">
-                  <h1><span>e</span>Business</h1>
+                  <h1><span style="color: #7851a9;">ΣAE</span><span style="color: #cfb53b;"> NJIT</span></h1>
                   <!-- Uncomment below if you prefer to use an image logo -->
                   <!-- <img src="img/logo.png" alt="" title=""> -->
 								</a>
