@@ -1863,7 +1863,7 @@ div#preloader {
 /*----------------------------------------*/
 
 .header-bg {
-  background: url(../img/slider/slider1.jpg);
+  background: url(/new/img/background/bg1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
