@@ -32,7 +32,7 @@
                 echo "
                 <script>
                     alert(\"Bad User/Password Character.\");
-                    window.location.replace(\"http://saenjit.com/memberlogin.php\");
+                    window.location.replace(\"http://saenjit.com/memberlogin.html\");
                 </script>
                 ";
                 exit();
@@ -42,7 +42,7 @@
                 echo"
                 <script>
                     alert(\"Incorrect Password...\");
-                    window.location.replace(\"http://saenjit.com/memberlogin.php\");
+                    window.location.replace(\"http://saenjit.com/memberlogin.html\");
                 </script>";
                 exit();
             }
