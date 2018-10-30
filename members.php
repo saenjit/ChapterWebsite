@@ -216,90 +216,12 @@
                 </div>
               </article>
               <div class="clear"></div>
-              <div class="single-post-comments">
-                <div class="comments-area">
-                  <div class="comments-heading">
-                    <h3>6 comments</h3>
-                  </div>
-                  <div class="comments-list">
-                    <ul>
-                      <li class="threaded-comments">
-                        <div class="comments-details">
-                          <div class="comments-list-img">
-                            <img src="img/blog/b02.jpg" alt="post-author">
-                          </div>
-                          <div class="comments-content-wrap">
-                            <span>
-																<b><a href="#">demo</a></b>
-																Post author
-																<span class="post-time">October 6, 2014 at 4:25 pm</span>
-                            <a href="#">Reply</a>
-                            </span>
-                            <p>Quisque semper nunc vitae erat pellentesque, ac placerat arcu consectetur</p>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="comments-details">
-                          <div class="comments-list-img">
-                            <img src="img/blog/b02.jpg" alt="post-author">
-                          </div>
-                          <div class="comments-content-wrap">
-                            <span>
-																<b><a href="#">admin</a></b>
-																Post author
-																<span class="post-time">October 6, 2014 at 6:18 pm </span>
-                            <a href="#">Reply</a>
-                            </span>
-                            <p>Quisque orci nibh, porta vitae sagittis sit amet, vehicula vel mauris. Aenean at justo dolor. Fusce ac sapien bibendum, scelerisque libero nec</p>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="threaded-comments">
-                        <div class="comments-details">
-                          <div class="comments-list-img">
-                            <img src="img/blog/b02.jpg" alt="post-author">
-                          </div>
-                          <div class="comments-content-wrap">
-                            <span>
-																<b><a href="#">demo</a></b>
-																Post author
-																<span class="post-time">October 6, 2014 at 7:25 pm</span>
-                            <a href="#">Reply</a>
-                            </span>
-                            <p>Quisque semper nunc vitae erat pellentesque, ac placerat arcu consectetur</p>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="comment-respond">
-                  <h3 class="comment-reply-title">Leave a Reply </h3>
-                  <span class="email-notes">Your email address will not be published. Required fields are marked *</span>
-                  <form action="#">
-                    <div class="row">
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <p>Name *</p>
-                        <input type="text" />
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <p>Email *</p>
-                        <input type="email" />
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <p>Website</p>
-                        <input type="text" />
-                      </div>
-                      <div class="col-lg-12 col-md-12 col-sm-12 comment-form-comment">
-                        <p>Website</p>
-                        <textarea id="message-box" cols="30" rows="10"></textarea>
-                        <input type="submit" value="Post Comment" />
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
+                <!-- begin wwww.htmlcommentbox.com -->
+                 <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Form</a> is loading comments...</div>
+                 <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+                 <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24TLObCwU.tyGOo6t.hUc1u1"+"&opts=16798&num=10&ts=1540929481396");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+                <!-- end www.htmlcommentbox.com -->
+                
               <!-- single-blog end -->
             </div>
           </div>
