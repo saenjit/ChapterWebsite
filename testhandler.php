@@ -43,13 +43,23 @@
                 exit();
             }
 
-            $s = "select * from LoginTable where Email = '$email' and Active = 'no'" ;
-            $t = mysqli_query($db,$s) or die('<script type="text/javascript">
-                alert("Your account is already active! Please log in. If you forgot your password, please contact the ~Webmaster~!");
-                </script>
-                Error');
+            while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+                $active 				= $r[ "Active" ];
+            }
+            
+            if ($active = ''){
+                echo"
+                <script>
+                    alert(\"Your account is already active! Please log in. If you forgot your password, please contact the ~Webmaster~!\");
+                    window.location.replace(\"http://saenjit.com/memberlogin.html\");
+                </script>";
+                exit();
+            }
 
             //Successfully passed all tests:
+            $s = "UPDATE LoginTable SET Active = 'first' WHERE Email = '$email'";
+            mysqli_query ($db, $s) or die (mysqli_error($db));
+            
             echo"
             <script>
                 alert(\"Password Requested. Please check your email. Phi Alpha. \");
