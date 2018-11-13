@@ -73,7 +73,7 @@
             
 
             $to = $email;
-            $subject = "~<b>ΣAE NJIT</b> Login Information~";
+            $subject = "SAE NJIT Login Information";
             $message = $out;
 
             mail($to, $subject, $message);
