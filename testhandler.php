@@ -11,16 +11,16 @@
 
             $email = $_POST['email'];
 
-            $s = "select * from PasswordsForWebsite where Email = '$email'" ;
+            $s = "select * from LoginTable where Email = '$email'" ;
 
             $t = mysqli_query($db,$s);
 
             $bad = false;
 
-            if (!isset ($pass)){
+            if (!isset ($email)){
                 $bad = true;
             }
-            if ($pass == ""){
+            if ($email == ""){
                 $bad = true;
             }
 
