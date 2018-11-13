@@ -152,22 +152,13 @@
                     <a href="/documents/BudgetF18.pdf">Budget</a>
                   </li>
                   <li>
-                    <a href="#">Something</a>
+                    <a href="/documents/FundraisingF18.pdf">Fundraising</a>
                   </li>
                   <li>
-                    <a href="#">Something else</a>
+                    <a href="/documents/IncomeF18.pdf">Income</a>
                   </li>
                   <li>
-                    <a href="#">Something else</a>
-                  </li>
-                  <li>
-                    <a href="#">Something else</a>
-                  </li>
-                  <li>
-                    <a href="#">Something else</a>
-                  </li>
-                  <li>
-                    <a href="#">Something else</a>
+                    <a href="/documents/SlushF18.pdf">Slush</a>
                   </li>
                 </ul>
               </div>
