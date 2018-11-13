@@ -155,7 +155,7 @@
                     <a href="/documents/FundraisingF18.pdf">Fundraising</a>
                   </li>
                   <li>
-                    <a href="/documents/IncomeF18.pdf">Income</a>
+                    <a href="/documents/PhilanthropyF18.pdf">Philanthropy</a>
                   </li>
                   <li>
                     <a href="/documents/SlushF18.pdf">Slush</a>
