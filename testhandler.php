@@ -59,7 +59,7 @@
 
             //Successfully passed all tests:
             $randompass = randomPassword(6,1,"lower_case");
-            $randompassHashed = md5($randompass)
+            $randompassHashed = md5($randompass);
             
             $s = "UPDATE LoginTable SET Active = 'first', Password = '$randompassHashed' WHERE Email = '$email'";
             mysqli_query ($db, $s) or die (mysqli_error($db));
