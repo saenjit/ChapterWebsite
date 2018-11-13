@@ -58,8 +58,8 @@
             }
 
             //Successfully passed all tests:
-            $randompass = randomPassword(6,1,"lower_case");
-            $randompassHashed = md5($randompass);
+            $randompassword = randomPassword(6,1,"lower_case");
+            $randompassHashed, md5($randompassword);
             
             $s = "UPDATE LoginTable SET Active = 'first', Password = '$randompassHashed' WHERE Email = '$email'";
             mysqli_query ($db, $s) or die (mysqli_error($db));
@@ -67,7 +67,7 @@
 
             $out = "Welcome to SAE NJIT brother.<br>
             Your account is now active.<br>
-            Please sign in using your NJIT Email with temporary password: <b>" .$randompass ."</b><br><br>When you log in for the first time, please change your password.<br><br>
+            Please sign in using your NJIT Email with temporary password: <b>" .$randompassword ."</b><br><br>When you log in for the first time, please change your password.<br><br>
             Phi Alpha,<br>
             ~Webmaster~";
             
