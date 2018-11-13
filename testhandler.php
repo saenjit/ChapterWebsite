@@ -47,7 +47,7 @@
                 $active 				= $r[ "Active" ];
             }
             
-            if ($active = ''){
+            if ($active != ''){
                 echo"
                 <script>
                     alert(\"Your account is already active! Please log in. If you forgot your password, please contact the ~Webmaster~!\");
