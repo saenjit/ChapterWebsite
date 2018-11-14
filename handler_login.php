@@ -65,6 +65,7 @@
         }else{
             if ($email == webmaster){
                 header("location:webmaster.php");
+                $_SESSION["webmaster"] = true;
             }else{
                 header("location:members.php");
             }
