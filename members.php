@@ -96,7 +96,7 @@
                   <li class="active">
                     <a class="page-scroll" href="#home">Home</a>
                   </li>
-                  <li class="active">
+                  <li>
                     <a class="page-scroll" href="/changepassword.php">Change Password</a>
                   </li>
                   <li>
