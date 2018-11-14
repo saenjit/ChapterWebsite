@@ -5,6 +5,12 @@
             error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
             ini_set('display_errors' , 1);
             
+            include ("sqlaccount.php") ;
+
+            $db = mysqli_connect($hostname, $username, $password, $project);
+
+            mysqli_select_db($db, $project); 
+ 
             //check if authenticated
             if (!$_SESSION['login']){
                 echo"
@@ -14,6 +20,10 @@
                 </script>";
                 exit();
             }
+            $dateTime = new DateTime('2015-01-01 12:30:12');
+            $email = $_SESSION['email'];
+            $s = "UPDATE LoginTable SET LastLogin='$dateTime' WHERE Email = '$email'"; 
+            $t = mysqli_query($db,$s);
 
         ?>
 <!------------------------------------------------------------------->
@@ -97,7 +107,7 @@
                     <a class="page-scroll" href="#home">Home</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="/changepassword.php">Change Password</a>
+                    <a class="page-scroll" href="changepassword.php">Change Password</a>
                   </li>
                   <li>
                     <a class="page-scroll" href="memberlogout.php">Logout</a>
