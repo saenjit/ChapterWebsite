@@ -66,7 +66,7 @@
             
             $out = "Welcome to SAE NJIT brother.<br>
             Your account is now active.<br>
-            Please sign in using your NJIT Email and with temporary password: <b>" .$randompassword ."</b><br><br>When you log in for the first time, please change your password.<br><br>
+            Please sign in using your NJIT Email and with temporary password: <strong>" .$randompassword ."</strong><br><br>When you log in for the first time, please change your password.<br><br>
             Phi Alpha,<br>
             ~Webmaster~";
 
