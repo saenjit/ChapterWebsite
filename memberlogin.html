@@ -76,6 +76,9 @@
                   <li>
                     <a class="page-scroll" href="#login">Member Login</a>
                   </li>
+                  <li>
+                    <a class="page-scroll" href="memberrequest.html">Request Access</a>
+                  </li>
                 </ul>
               </div>
               <!-- navbar-collapse -->
@@ -191,16 +194,17 @@
                         
                     </div>
 					
-                    <form action = "memberloginhandler.php" method = "post" name=loginForm>
+                    <form action = "handler_login.php" method = "post" name=loginForm>
                         <fieldset id="field"><legend>Brothers, please enter the password.</legend>
                             
-                        <input type = hidden name = alpha id = alpha value = Member>
-                        Password:  <input type=password name=truegentlemen id=pass autocomplete="off" placeholder="Password" required>
-                        <br>
+                        Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name=email id=email autocomplete="off" placeholder="ananya@singh.com" required><br>
+                        Password:  <input type=password name=password id=password autocomplete="off" placeholder="Password" required>
+                        <br><br>
                             
                         <input type = submit value = "Log In">
                         </fieldset>
                     </form>
+                      <span><a href=memberrequest.html>Request Access</a></span>
                   </div>
                   <div class="entry-content">
                     

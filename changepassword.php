@@ -1,3 +1,22 @@
+<!------------------------------AUTHENTICATION----------------------->
+        <?php
+            session_set_cookie_params(600);
+            session_start();
+            error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+            ini_set('display_errors' , 1);
+            
+            //check if authenticated
+            if (!$_SESSION['login']){
+                echo"
+                <script>
+                    alert(\"Not logged in...\");
+                    window.location.replace(\"http://saenjit.com/memberlogin.html\");
+                </script>";
+                exit();
+            }
+
+        ?>
+<!------------------------------------------------------------------->
 <!Doctype html>
 <html lang="en">
 <head>
@@ -34,6 +53,12 @@
   <!-- Responsive Stylesheet File -->
   <link href="css/responsive.css" rel="stylesheet">
 
+  <!-- =======================================================
+    Theme Name: eBusiness
+    Theme URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example">
@@ -160,17 +185,18 @@
                   <img src="/images/membersLoginPic.gif" alt="" />
                 </div>
                 <div class="post-information">
-                  <h2>Members Only.</h2>
+                  <h2>Password Change.</h2>
                   <div class="entry-meta">
                     <!--STATUS OFFLINE-->
 					
-                    <form action = "handler.php" method = "post" name=loginForm>
-                        <fieldset id="field"><legend>Please enter you email to request access.</legend>
+                    <form action = "handler_changepassword.php" method = "post" name=loginForm>
+                        <fieldset id="field"><legend>Please enter a new password.</legend>
                             
-                        Email:  <input name=email id=email autocomplete="off" placeholder="ananya@singh.com" required>
+                        Password:  <input type=password name=password1 id=password2 autocomplete="off" placeholder="Password" required><br>
+                        Password:  <input type=password name=password2 id=password2 autocomplete="off" placeholder="Password (Confirm)" required>
                         <br><br>
                             
-                        <input type = submit value = "Request Access">
+                        <input type = submit value = "Change Password">
                         </fieldset>
                     </form>
                   </div>

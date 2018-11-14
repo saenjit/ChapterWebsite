@@ -1,22 +1,3 @@
-<!------------------------------AUTHENTICATION----------------------->
-        <?php
-            session_set_cookie_params(600);
-            session_start();
-            error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
-            ini_set('display_errors' , 1);
-            
-            //check if authenticated
-            if (!$_SESSION['login']){
-                echo"
-                <script>
-                    alert(\"Not logged in...\");
-                    window.location.replace(\"http://saenjit.com/memberlogin.html\");
-                </script>";
-                exit();
-            }
-
-        ?>
-<!------------------------------------------------------------------->
 <!Doctype html>
 <html lang="en">
 <head>
@@ -53,12 +34,6 @@
   <!-- Responsive Stylesheet File -->
   <link href="css/responsive.css" rel="stylesheet">
 
-  <!-- =======================================================
-    Theme Name: eBusiness
-    Theme URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example">
@@ -117,10 +92,10 @@
           <div class="slider-content text-center">
             <div class="header-bottom">
               <div class="layer2 wow zoomIn" data-wow-duration="1s" data-wow-delay=".4s">
-                <h1 class="title2">Welcome Brothers </h1>
+                <h1 class="title2">Member Access Request </h1>
               </div>
               <div class="layer3 wow zoomInUp" data-wow-duration="2s" data-wow-delay="1s">
-                <h2 class="title3">Please log in below.</h2>
+                <h2 class="title3">Please enter your email below.</h2>
               </div>
             </div>
           </div>
@@ -185,18 +160,18 @@
                   <img src="/images/membersLoginPic.gif" alt="" />
                 </div>
                 <div class="post-information">
-                  <h2>Password Change</h2>
+                  <h2>Request Access.</h2>
                   <div class="entry-meta">
                     <!--STATUS OFFLINE-->
 					
-                    <form action = "changepasswordhandler.php" method = "post" name=loginForm>
-                        <fieldset id="field"><legend>Please enter a new password.</legend>
-                            
-                        Password:  <input type=password name=password1 id=password2 autocomplete="off" placeholder="Password" required><br>
-                        Password:  <input type=password name=password2 id=password2 autocomplete="off" placeholder="Password (Confirm)" required>
+                    <form action = "handler_request.php" method = "post" name=loginForm>
+                        <fieldset id="field"><legend>Please enter you email to request access.</legend>
+                        If you do not have access, contact the Webmaster.
+                        <br><br>
+                        Email:  <input name=email id=email autocomplete="off" placeholder="ananya@singh.com" required>
                         <br><br>
                             
-                        <input type = submit value = "Change Password">
+                        <input type = submit value = "Request Access">
                         </fieldset>
                     </form>
                   </div>

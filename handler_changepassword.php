@@ -22,6 +22,15 @@
                     window.location.replace(\"http://saenjit.com/changepassword.php\");
                 </script>
                 ";
+                die();
+            }
+            if ($pass < 6){
+                echo "
+                <script>
+                    alert(\"Password must be at least 6 characters. Please re-enter a new password.\");
+                    window.location.replace(\"http://saenjit.com/changepassword.php\");
+                </script>
+                ";
             }
 
             $bad = false;
@@ -40,6 +49,7 @@
                     window.location.replace(\"http://saenjit.com/changepassword.php\");
                 </script>
                 ";
+                die();
             }
 
             //Successfully passed all tests:

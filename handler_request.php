@@ -38,7 +38,7 @@
             if (mysqli_num_rows($t)<1){
                 echo"
                 <script>
-                    alert(\"You are not a brother...incident reported\");
+                    alert(\"You are not a brother...IP Address has been reported.\");
                     window.location.replace(\"http://saenjit.com/\");
                 </script>";
                 exit();

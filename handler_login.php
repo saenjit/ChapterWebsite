@@ -57,10 +57,14 @@
                 $active 				= $r[ "Active" ];
         }
         if ($active == "first"){
+            echo"
+                <script>
+                    alert(\"Since this is your first time logging in, you'll need to change your password.\");
+                </script>";
             header("location:/test/changepassword.php");
         }
 
-        //header("location:members.php");
+        header("location:members.php");
 
         ?>
 <!------------------------------------------------------------------->

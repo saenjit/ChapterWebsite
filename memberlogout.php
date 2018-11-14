@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $_SESSION["logged"] = false;
+    $_SESSION["login"] = false;
     session_destroy();
 
     //redirect
