@@ -63,8 +63,11 @@
                     window.location.replace(\"http://saenjit.com/changepassword.php\");
                 </script>";
         }else{
-
-            header("location:members.php");
+            if ($email == webmaster){
+                header("location:webmaster.php");
+            }else{
+                header("location:members.php");
+            }
         }
 
         ?>

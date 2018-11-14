@@ -191,7 +191,7 @@
 					
                     <form action = "handler_changepassword.php" method = "post" name=loginForm>
                         <fieldset id="field"><legend>Please enter a new password.</legend>
-                            
+                        <!--Password Entries-->
                         Password:  <input type=password name=password1 id=password2 autocomplete="off" placeholder="Password" required><br>
                         Password:  <input type=password name=password2 id=password2 autocomplete="off" placeholder="Password (Confirm)" required>
                         <br><br>

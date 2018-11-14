@@ -20,6 +20,7 @@
                 </script>";
                 exit();
             }
+            //creates datetime object, then record in it database
             $dateTime = date("Y-m-d H:i:s");
             $email = $_SESSION['email'];
             $s = "UPDATE LoginTable SET LastLogin='$dateTime' WHERE Email = '$email'"; 
@@ -159,6 +160,8 @@
             </div>
             <div class="single-blog-page">
               <div class="left-blog">
+                  
+<!--Documents and Links Section-->
                 <h4>Documents/Links</h4>
                 <ul>
                   <li>
