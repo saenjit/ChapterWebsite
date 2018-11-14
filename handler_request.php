@@ -69,8 +69,6 @@
             Please sign in using your NJIT Email and with temporary password: <strong>" .$randompassword ."</strong><br><br>When you log in for the first time, please change your password.<br><br>
             Phi Alpha,<br>
             ~Webmaster~";
-
-            $out->IsHTML(true);
             
             $to = $email;
             $subject = "SAE NJIT Login Information";
