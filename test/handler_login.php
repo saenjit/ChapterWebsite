@@ -57,7 +57,7 @@
                 $active 				= $r[ "Active" ];
         }
         if ($active == "first"){
-            header("location:changepassword.php");
+            header("location:/test/changepassword.php");
         }
 
         //header("location:members.php");

@@ -28,10 +28,10 @@
 
             $bad = false;
 
-            if (!isset ($email)){
+            if (!isset ($pass) || !isset ($pass2)){
                 $bad = true;
             }
-            if ($email == ""){
+            if ($pass == "" || $pass2 == ""){
                 $bad = true;
             }
 
