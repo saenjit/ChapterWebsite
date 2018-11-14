@@ -69,7 +69,7 @@
             Please sign in using your NJIT Email and with temporary password: " .$randompassword ."
             When you log in for the first time, please change your password.
             
-            Phi Alpha,<br>
+            Phi Alpha,
             ~Webmaster~";
             
             $to = $email;
