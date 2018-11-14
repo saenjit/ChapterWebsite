@@ -18,7 +18,7 @@
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $pass;
 
-            $s = "select * from PasswordsForWebsite where Email = '$email' and Password = '$pass'" ;
+            $s = "select * from LoginTable where Email = '$email' and Password = '$pass'" ;
 
             $t = mysqli_query($db,$s);
 
@@ -42,11 +42,10 @@
             }
 
             if (mysqli_num_rows($t)<1){
-                print($email." ".$pass);
                 echo"
                 <script>
                     alert(\"Incorrect Password...\");
-                    
+                    window.location.replace(\"http://saenjit.com/memberlogin.html\");
                 </script>";
                 exit();
             }
