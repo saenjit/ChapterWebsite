@@ -29,7 +29,7 @@
                 echo "
                 <script>
                     alert(\"Please enter an email.\");
-                    window.location.replace(\"http://saenjit.com/\");
+                    window.location.replace(\"http://saenjit.com/memberrequest.html\");
                 </script>
                 ";
                 exit();
@@ -81,7 +81,7 @@
             echo"
             <script>
                 alert(\"Password Requested. Please check your email. Phi Alpha. \");
-                window.location.replace(\"http://saenjit.com/\");
+                window.location.replace(\"http://saenjit.com/memberlogin.html\");
             </script>";
 
 
