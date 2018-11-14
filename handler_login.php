@@ -49,6 +49,16 @@
                 </script>";
                 exit();
             }
+
+            //Last test to make sure account isnt disabled
+            if ($active == "no"){
+                echo"
+                <script>
+                    alert(\"Your account is disabled. Please contact the ~Webmaster~.\");
+                    window.location.replace(\"http://saenjit.com/memberlogin.html\");
+                </script>";
+                exit();
+            }
             
             //Set logged to true cause they passed authentication
             $_SESSION["login"] = true;
