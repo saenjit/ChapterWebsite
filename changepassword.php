@@ -93,7 +93,7 @@
               <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
                 <ul class="nav navbar-nav navbar-right">
                   <li>
-                    <a class="page-scroll" href="#login">Member Login</a>
+                    <a class="page-scroll" href="/memberlogin.html">Member Login</a>
                   </li>
                 </ul>
               </div>
