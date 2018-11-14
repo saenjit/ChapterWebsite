@@ -60,8 +60,8 @@
             echo"
                 <script>
                     alert(\"Since this is your first time logging in, you'll need to change your password.\");
+                    window.location.replace(\"http://saenjit.com/changepassword.php\");
                 </script>";
-            header("location:changepassword.php");
         }else{
 
             header("location:members.php");
