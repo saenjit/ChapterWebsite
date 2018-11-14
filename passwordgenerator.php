@@ -1,5 +1,4 @@
-<?php
-function randomPassword($length,$count, $characters) {
+<!--function randomPassword($length,$count, $characters) {
  
 // $length - the length of the generated password
 // $count - number of passwords to be generated
@@ -33,5 +32,17 @@ function randomPassword($length,$count, $characters) {
     }
      
     return $passwords; // return the generated password
+}-->
+
+<?php
+function random_pass($length)
+{
+   $string = "";
+   $chars = "abcdefghijklmanopqrstuvwxyz0123456789";
+   $size = strlen($chars);
+   for ($i = 0; $i < $length; $i++) {
+       $string .= $chars[rand(0, $size - 1)];
+   }
+   return $string; 
 }
 ?>
