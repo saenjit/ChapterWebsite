@@ -65,6 +65,7 @@
                 window.location.replace(\"http://saenjit.com/memberlogin.html\");
             </script>";
 
-
+            $_SESSION["login"] = false;
+            session_destroy();
         ?>
 <!------------------------------------------------------------------->
