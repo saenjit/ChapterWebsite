@@ -42,6 +42,7 @@
             }
 
             if (mysqli_num_rows($t)<1){
+                print($email." ".$pass);
                 echo"
                 <script>
                     alert(\"Incorrect Password...\");
