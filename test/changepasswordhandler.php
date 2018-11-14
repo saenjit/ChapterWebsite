@@ -44,6 +44,7 @@
 
             //Successfully passed all tests:
             $email = $_SESSION['email'];
+            $pass = md5($pass);
             $s = "UPDATE LoginTable SET Active = 'yes', Password = '$pass' WHERE Email = '$email'"; 
 
             $t = mysqli_query($db,$s); 
