@@ -187,21 +187,124 @@
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
               <!--Main Body-->
-                <h1>Webmaster Tools</h1>
-                <form>
-                   <fieldset>
-                      <legend>Select a tool</legend>
-                      <p>
-                         <label>Tool</label>
-                         <select id = "webmasterTools">
-                           <option value = "1">Add a Member</option>
-                           <option value = "2">Check Last Login Date</option>
-                           <option value = "3">Reset a Password</option>
-                           <option value = "4">Disable an Account</option>
-                         </select>
-                      </p>
-                   </fieldset>
-                </form>
+<!-------------------------------------------------------------Drop down menu Javascript/CSS------------------------------------------------------------->
+                
+                <style>
+                    #addMember {display: none;}
+                    #checkLastLogin {display: none;}
+                    #resetPassword {display: none;}
+                    #disableAccount {display: none;}
+                    #checkActiveAccounts {display: none;}
+                </style> 
+
+                <script>
+                    function appear(){
+                        addMemberPointer = document.getElementById("addMember")
+                        checkLastLoginPointer = document.getElementById("checkLastLogin")
+                        resetPasswordPointer = document.getElementById("resetPassword")
+                        disableAccountPointer = document.getElementById("disableAccount")
+                        checkActiveAccountsPointer = document.getElementById("checkActiveAccounts")
+                        dropDownMenu = document.getElementById("webmasterTools")
+                        $toolChoice = dropDownMenu.value
+
+
+                        switch($toolChoice){
+                            case "1":
+                                addMemberPointer.style.display = "block"
+                                checkLastLoginPointer.style.display = "none"
+                                resetPasswordPointer.style.display = "none"
+                                disableAccountPointer.style.display = "none"
+                                checkActiveAccounts.style.display = "none"
+                                break;
+                            case "2":
+                                addMemberPointer.style.display = "none"
+                                checkLastLoginPointer.style.display = "block"
+                                resetPasswordPointer.style.display = "none"
+                                disableAccountPointer.style.display = "none"
+                                checkActiveAccounts.style.display = "none"
+                                break;
+                            case "3":
+                                addMemberPointer.style.display = "none"
+                                checkLastLoginPointer.style.display = "none"
+                                resetPasswordPointer.style.display = "block"
+                                disableAccountPointer.style.display = "none"
+                                checkActiveAccounts.style.display = "none"
+                                break;
+                            case "4":
+                                addMemberPointer.style.display = "none"
+                                checkLastLoginPointer.style.display = "none"
+                                resetPasswordPointer.style.display = "none"
+                                disableAccountPointer.style.display = "block"
+                                checkActiveAccounts.style.display = "none"
+                                break;
+                            case "5":
+                                addMemberPointer.style.display = "none"
+                                checkLastLoginPointer.style.display = "none"
+                                resetPasswordPointer.style.display = "none"
+                                disableAccountPointer.style.display = "none"
+                                checkActiveAccounts.style.display = "block"
+                            default:
+                                addMemberPointer.style.display = "none"
+                                checkLastLoginPointer.style.display = "none"
+                                resetPasswordPointer.style.display = "none"
+                                disableAccountPointer.style.display = "none"
+                                checkActiveAccounts.style.display = "none"
+                        }
+                    }
+                </script>
+                
+<!-------------------------------------------------------------Drop down menu Javascript/CSS------------------------------------------------------------->
+                 <h1>Webmaster Tools</h1>
+                    <form>
+                       <fieldset>
+                          <legend>Select a tool</legend>
+                          <p>
+                             <label>Tool</label>
+                             <select name = "webmasterTools" id = "webmasterTools" onchange="appear()">
+                               <option value = "0">(select a tool)</option>
+                               <option value = "1">Add a Member</option>
+                               <option value = "2">Check Last Login Date</option>
+                               <option value = "3">Reset a Password</option>
+                               <option value = "4">Disable an Account</option>
+                               <option value = "5">Check Active Accounts</option>
+                             </select>
+                          </p>
+                       </fieldset>
+                    </form>
+                
+                <!--Add a Member-->
+                    <div id = "addMember">
+                        <form action = "handler_changepassword.php" method = "post" name=addMemberForm>
+                        <fieldset id="field"><legend>Please enter a new password.</legend>
+                        <!--Password Entries-->
+                        Full Name:&nbsp;<input name=name id=name autocomplete="off" placeholder="Ananya Singh" required><br><br>
+                        NJIT Email:     <input name=email id=email autocomplete="off" placeholder="ananya@singh.com" required><br>
+                        <br><br>
+                            
+                        <input type = submit value = "Add User">
+                        </fieldset>
+                    </form>
+                        
+                <!--Check Last Login-->
+                    </div>
+                    <div id = "checkLastLogin">
+                        checkLastLogin
+                    </div>
+                
+                <!--Reset a Password-->
+                    <div id = "resetPassword">
+                        resetPassword
+                    </div>
+                
+                <!--Disable an Account-->
+                    <div id = "disableAccount">
+                        disableAccount
+                    </div>
+                
+                <!--Check Active Accounts-->
+                    <div id = "checkActiveAccounts">
+                        checkActiveAccounts
+                    </div>
               <!-- single-blog end -->
             </div>
           </div>
