@@ -21,6 +21,7 @@
                 exit();
             }
             //creates datetime object, then record in it database
+            date_default_timezone_set('America/New_York');
             $dateTime = date("Y-m-d H:i:s");
             $email = $_SESSION['email'];
             $s = "UPDATE LoginTable SET LastLogin='$dateTime' WHERE Email = '$email'"; 

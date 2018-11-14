@@ -20,11 +20,13 @@
                 </script>";
                 exit();
             }
-            //creates datetime object, then record in it database
-            $dateTime = date("Y-m-d H:i:s");
-            $email = $_SESSION['email'];
-            $s = "UPDATE LoginTable SET LastLogin='$dateTime' WHERE Email = '$email'"; 
-            $t = mysqli_query($db,$s);
 
         ?>
 <!------------------------------------------------------------------->
+<?php
+    //Add a Member Function
+    switch ($tool){
+        case "addMember":
+            break;
+    }
+?>

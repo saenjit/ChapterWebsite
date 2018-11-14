@@ -21,6 +21,7 @@
                 exit();
             }
             //creates datetime object, then record in it database
+            date_default_timezone_set('America/New_York');
             $dateTime = date("Y-m-d H:i:s");
             $email = $_SESSION['email'];
             $s = "UPDATE LoginTable SET LastLogin='$dateTime' WHERE Email = '$email'"; 
@@ -276,15 +277,15 @@
                 <!--Add a Member-->
                     <div id = "addMember">
                         <form action = "nothing" method = "post" name=addMemberForm>
-                        <fieldset id="field"><legend>Please enter the new account information.</legend>
-                        <!--Account Info-->
-                        Full Name:&nbsp;<input name=name id=name autocomplete="off" placeholder="Ananya Singh" required><br><br>
-                        NJIT Email:     <input name=email id=email autocomplete="off" placeholder="ananya@singh.com" required><br>
-                        <br><br>
-                            
-                        <input type = submit value = "Add User">
-                        </fieldset>
-                    </form>
+                            <fieldset id="field"><legend>Please enter the new account information.</legend>
+                            <!--Account Info-->
+                            Full Name:&nbsp;<input name=name id=name autocomplete="off" placeholder="Ananya Singh" required><br><br>
+                            NJIT Email:     <input name=email id=email autocomplete="off" placeholder="ananya@singh.com" required><br>
+                            <br><br>
+
+                            <input type = submit value = "Add User">
+                            </fieldset>
+                        </form>
                     </div>
     
                 <!--Check Last Login-->
