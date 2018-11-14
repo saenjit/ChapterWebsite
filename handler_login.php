@@ -61,6 +61,7 @@
                     alert(\"Your account is disabled. Please contact the ~Webmaster~.\");
                     window.location.replace(\"http://saenjit.com/memberlogin.html\");
                 </script>";
+                mail("tam44@njit.edu", "Disabled Account Attempted to Log In", $email." Attempted to log in.");
                 exit();
             }
             
