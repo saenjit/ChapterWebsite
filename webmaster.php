@@ -214,41 +214,41 @@
                                 checkLastLoginPointer.style.display = "none"
                                 resetPasswordPointer.style.display = "none"
                                 disableAccountPointer.style.display = "none"
-                                checkActiveAccounts.style.display = "none"
+                                checkActiveAccountsPointer.style.display = "none"
                                 break;
                             case "2":
                                 addMemberPointer.style.display = "none"
                                 checkLastLoginPointer.style.display = "block"
                                 resetPasswordPointer.style.display = "none"
                                 disableAccountPointer.style.display = "none"
-                                checkActiveAccounts.style.display = "none"
+                                checkActiveAccountsPointer.style.display = "none"
                                 break;
                             case "3":
                                 addMemberPointer.style.display = "none"
                                 checkLastLoginPointer.style.display = "none"
                                 resetPasswordPointer.style.display = "block"
                                 disableAccountPointer.style.display = "none"
-                                checkActiveAccounts.style.display = "none"
+                                checkActiveAccountsPointer.style.display = "none"
                                 break;
                             case "4":
                                 addMemberPointer.style.display = "none"
                                 checkLastLoginPointer.style.display = "none"
                                 resetPasswordPointer.style.display = "none"
                                 disableAccountPointer.style.display = "block"
-                                checkActiveAccounts.style.display = "none"
+                                checkActiveAccountsPointer.style.display = "none"
                                 break;
                             case "5":
                                 addMemberPointer.style.display = "none"
                                 checkLastLoginPointer.style.display = "none"
                                 resetPasswordPointer.style.display = "none"
                                 disableAccountPointer.style.display = "none"
-                                checkActiveAccounts.style.display = "block"
+                                checkActiveAccountsPointer.style.display = "block"
                             default:
                                 addMemberPointer.style.display = "none"
                                 checkLastLoginPointer.style.display = "none"
                                 resetPasswordPointer.style.display = "none"
                                 disableAccountPointer.style.display = "none"
-                                checkActiveAccounts.style.display = "none"
+                                checkActiveAccountsPointer.style.display = "none"
                         }
                     }
                 </script>
