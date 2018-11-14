@@ -49,6 +49,10 @@
                 </script>";
                 exit();
             }
+            //grab active status from database
+            while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+                $active 				= $r[ "Active" ];
+            }
 
             //Last test to make sure account isnt disabled
             if ($active == "no"){
@@ -63,9 +67,6 @@
             //Set logged to true cause they passed authentication
             $_SESSION["login"] = true;
 
-        while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
-                $active 				= $r[ "Active" ];
-        }
         if ($active == "first"){
             echo"
                 <script>
