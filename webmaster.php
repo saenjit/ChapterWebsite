@@ -243,6 +243,7 @@
                                 resetPasswordPointer.style.display = "none"
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "block"
+                                break;
                             default:
                                 addMemberPointer.style.display = "none"
                                 checkLastLoginPointer.style.display = "none"
@@ -274,9 +275,9 @@
                 
                 <!--Add a Member-->
                     <div id = "addMember">
-                        <form action = "handler_changepassword.php" method = "post" name=addMemberForm>
-                        <fieldset id="field"><legend>Please enter a new password.</legend>
-                        <!--Password Entries-->
+                        <form action = "nothing" method = "post" name=addMemberForm>
+                        <fieldset id="field"><legend>Please enter the new account information.</legend>
+                        <!--Account Info-->
                         Full Name:&nbsp;<input name=name id=name autocomplete="off" placeholder="Ananya Singh" required><br><br>
                         NJIT Email:     <input name=email id=email autocomplete="off" placeholder="ananya@singh.com" required><br>
                         <br><br>
@@ -284,9 +285,9 @@
                         <input type = submit value = "Add User">
                         </fieldset>
                     </form>
-                        
-                <!--Check Last Login-->
                     </div>
+    
+                <!--Check Last Login-->
                     <div id = "checkLastLogin">
                         checkLastLogin
                     </div>
