@@ -187,7 +187,21 @@
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
               <!--Main Body-->
-                
+                <h1>Webmaster Tools</h1>
+                <form>
+                   <fieldset>
+                      <legend>Select a tool</legend>
+                      <p>
+                         <label>Tool</label>
+                         <select id = "webmasterTools">
+                           <option value = "1">Add a Member</option>
+                           <option value = "2">Check Last Login Date</option>
+                           <option value = "3">Reset a Password</option>
+                           <option value = "4">Disable an Account</option>
+                         </select>
+                      </p>
+                   </fieldset>
+                </form>
               <!-- single-blog end -->
             </div>
           </div>
