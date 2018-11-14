@@ -53,12 +53,6 @@
             //Set logged to true cause they passed authentication
             $_SESSION["logged"] = true;
 
-        echo"
-                <script>
-                    alert(\"Success\");
-                    window.location.replace(\"http://saenjit.com/memberlogin.html\");
-                </script>";
-                exit();
 
         //header("location:members.php");
 
