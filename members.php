@@ -20,7 +20,7 @@
                 </script>";
                 exit();
             }
-            $dateTime = new DateTime('2015-01-01 12:30:12');
+            $dateTime = date("Y-m-d H:i:s");
             $email = $_SESSION['email'];
             $s = "UPDATE LoginTable SET LastLogin='$dateTime' WHERE Email = '$email'"; 
             $t = mysqli_query($db,$s);
