@@ -63,7 +63,7 @@
                     window.location.replace(\"http://saenjit.com/changepassword.php\");
                 </script>";
         }else{
-            if ($email == webmaster){
+            if ($email == "webmaster"){
                 header("location:webmaster.php");
                 $_SESSION["webmaster"] = true;
             }else{
