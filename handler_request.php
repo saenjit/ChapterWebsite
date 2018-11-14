@@ -64,9 +64,11 @@
             $s = "UPDATE LoginTable SET Active = 'first', Password = '$randompassHashed' WHERE Email = '$email'";
             mysqli_query ($db, $s) or die (mysqli_error($db));
             
-            $out = "Welcome to SAE NJIT brother.<br>
-            Your account is now active.<br>
-            Please sign in using your NJIT Email and with temporary password: <strong>" .$randompassword ."</strong><br><br>When you log in for the first time, please change your password.<br><br>
+            $out = "Welcome to SAE NJIT brother.
+            Your account is now active.
+            Please sign in using your NJIT Email and with temporary password: " .$randompassword ."
+            When you log in for the first time, please change your password.
+            
             Phi Alpha,<br>
             ~Webmaster~";
             
