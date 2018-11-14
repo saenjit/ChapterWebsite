@@ -24,7 +24,7 @@
                 ";
                 die();
             }
-            if ($pass < 6){
+            if (strlen($pass) < 6){
                 echo "
                 <script>
                     alert(\"Password must be at least 6 characters. Please re-enter a new password.\");
