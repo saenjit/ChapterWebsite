@@ -51,8 +51,14 @@
             }
             
             //Set logged to true cause they passed authentication
-            $_SESSION["logged"] = true;
+            $_SESSION["login"] = true;
 
+        while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+                $active 				= $r[ "Active" ];
+        }
+        if ($active == "first"){
+            header("location:changepassword.php");
+        }
 
         //header("location:members.php");
 
