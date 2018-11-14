@@ -135,10 +135,10 @@
           <div class="slider-content text-center">
             <div class="header-bottom">
               <div class="layer2 wow zoomIn" data-wow-duration="1s" data-wow-delay=".4s">
-                <h1 class="title2">Phi Alpha Brothers! </h1>
+                <h1 class="title2">Welcome Webmaster. </h1>
               </div>
               <div class="layer3 wow zoomInUp" data-wow-duration="2s" data-wow-delay="1s">
-                <h2 class="title3">Welcome to the Members-only section</h2>
+                <h2 class="title3">Scroll down for all webmaster tools.</h2>
               </div>
             </div>
           </div>
@@ -186,13 +186,7 @@
         <div class="col-md-8 col-sm-8 col-xs-12">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-              <!-- single-blog start -->
-              <div class="clear"></div>
-                <!-- begin wwww.htmlcommentbox.com -->
-                 <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Form</a> is loading comments...</div>
-                 <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
-                 <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24TLObCwU.tyGOo6t.hUc1u1"+"&opts=16862&num=50&ts=1540953263416");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
-                <!-- end www.htmlcommentbox.com -->
+              <!--Main Body-->
                 
               <!-- single-blog end -->
             </div>
