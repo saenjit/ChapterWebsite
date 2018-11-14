@@ -46,7 +46,7 @@
                 echo"
                 <script>
                     alert(\"Incorrect Password...\");
-                    window.location.replace(\"http://saenjit.com/memberlogin.html\");
+                    
                 </script>";
                 exit();
             }
