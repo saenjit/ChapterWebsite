@@ -22,10 +22,6 @@
                 ";
             }
 
-            $s = "UPDATE LoginTable SET Active = 'yes', Password = '$pass' WHERE Email = '$email'"; 
-
-            $t = mysqli_query($db,$s);
-
             $bad = false;
 
             if (!isset ($pass) || !isset ($pass2)){
@@ -45,6 +41,10 @@
             }
 
             //Successfully passed all tests:
+            $email = $_SESSION['email'];
+            $s = "UPDATE LoginTable SET Active = 'yes', Password = '$pass' WHERE Email = '$email'"; 
+
+            $t = mysqli_query($db,$s); 
             
             echo"
             <script>
