@@ -368,6 +368,7 @@
                 
                 <!--Disable an Account-->
                     <div id = "disableAccount">
+                        Select an account to disable it.
                         <form action = "/webmastertools/disableaccount.php" method = "post" name=disableAccountForm id=disableAccountForm>
                             <?php
                                 $s = "SELECT * FROM LoginTable";
@@ -407,6 +408,7 @@
                     </div>
                 <!--Delete a Member-->
                     <div id = "deleteMember">
+                        Select a member to delete.
                         <form action = "/webmastertools/deletemember.php" method = "post" name=deleteMemberForm id=deleteMemberForm>
                             <?php
                                 $s = "SELECT * FROM LoginTable";
@@ -426,6 +428,7 @@
                     </div>
                 <!--Enable an Account-->
                     <div id = "enableAccount">
+                        Select an account to re-enable it.
                         <form action = "/webmastertools/enableaccount.php" method = "post" name=enableAccountForm id=enableAccountForm>
                             <?php
                                 $s = "SELECT * FROM LoginTable";
