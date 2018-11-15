@@ -1,11 +1,13 @@
 <?php
     $name = $_POST['name'];
     $email = $_POST['email'];
-    $subject = $_POST['subject'];
+    
+    $subject = "SAENJIT.com Contact Form: ";
+    $subject .= $_POST['subject'];
 
-    $message = "Contact Form from saenjit.com: ";
+    $message = "//Contact Form from saenjit.com: \\";
     $message.= $_POST['message'];
-    $message.="This was sent from ".$email;
+    $message.="(This was sent from ".$email.".)";
     
     if (mail("tam44@njit.edu", $subject, $message)){
         echo "
