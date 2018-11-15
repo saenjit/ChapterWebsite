@@ -196,6 +196,7 @@
                     #resetPassword {display: none;}
                     #disableAccount {display: none;}
                     #checkActiveAccounts {display: none;}
+                    #deleteMember {display: none;}
                 </style> 
 
                 <script>
