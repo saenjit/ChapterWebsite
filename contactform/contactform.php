@@ -4,7 +4,8 @@
     $subject = $_POST['subject'];
     $message = $_POST['message'];
     
-    if (mail("saenjiotatau@gmail.com",$subject,$message)){
+    mail("saenjiotatau@gmail.com",$subject,$message);
+    if ($test){
         echo "
         <script>
             alert(\"Message Sent. Allow 24-48 hours for us to get back to you.\");
