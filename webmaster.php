@@ -401,7 +401,7 @@
                                 }
                                 echo "</select>";
                             ?>
-                            <input type = submit value = "Delete Member>
+                            <input type = submit value = "Delete Member">
                         </form>
                     </div>
               <!-- single-blog end -->
