@@ -334,6 +334,8 @@
                                     $name                   = $r[ "Name" ];
                                     $select.='<option value="'.$name'">'.$name.'</option>';
                                 }
+                                $select.='</select>';
+                                echo $select;
                             ?>
                             <input type = submit value = "Reset Password">
                         </form>
