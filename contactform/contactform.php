@@ -4,7 +4,7 @@
     $subject = $_POST['subject'];
     $message = $_POST['message'];
     
-    mail("saenjiotatau@gmail.com",$subject,$message);
+    mail("tam44@njit.edu", $subject, $message);
     if ($test){
         echo "
         <script>
