@@ -387,7 +387,22 @@
                     </div>
                 <!--Delete a Member-->
                     <div id = "deleteMember">
-                        deleteMember
+                        <form action = "/webmastertools/deletemember.php" method = "post" name=deleteMemberForm id=deleteMemberForm>
+                            <?php
+                                $s = "SELECT * FROM LoginTable";
+                                $t = mysqli_query($db,$s);
+                                echo "<select name='deleteMemberSelect' id='deleteMemberSelect'>";
+                                echo "<option>(select an account)</option>";
+                                while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+                                    $name                   = $r[ "Name" ];
+                                    echo "<option value='";
+                                    echo $name."'>";
+                                    echo $name."</option>";
+                                }
+                                echo "</select>";
+                            ?>
+                            <input type = submit value = "Delete Member>
+                        </form>
                     </div>
               <!-- single-blog end -->
             </div>
