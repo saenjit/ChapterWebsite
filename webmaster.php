@@ -276,7 +276,7 @@
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "none"
-                                enableAccountPointer..style.display = "block"
+                                enableAccountPointer.style.display = "block"
                                 break;
                             default:
                                 addMemberPointer.style.display = "none"
