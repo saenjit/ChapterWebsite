@@ -328,7 +328,16 @@
                 <!--Reset a Password-->
                     <div id = "resetPassword">
                         <form action = "/webmastertools/resetpassword.php" method = "post" name=resetPasswordForm id=resetPasswordForm>
-                            
+                            <?php
+                                $s = "SELECT * FROM LoginTable";
+                                $t = mysqli_query($db,$s);
+                                echo "<select name='resetPasswordSelect' id='resetPasswordSelect'>";
+                                while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+                                    $name                   = $r[ "Name" ];
+                                    echo "<option value='".$name"'>".$name."</option>";
+                                }
+                                echo "</select>";
+                            ?>
                             <input type = submit value = "Reset Password">
                         </form>
                     </div>
