@@ -31,6 +31,6 @@
     echo"
         <script>
             alert(\"Member successfully added.\");
-            window.location.replace(\"http://saenjit.com/webmaster.php\");
+            window.location.replace(\"http://saenjit.com/webmaster.php#tools\");
         </script>";
 ?>

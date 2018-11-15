@@ -291,7 +291,8 @@
                 </script>
                 
 <!-------------------------------------------------------------Drop down menu Javascript/CSS------------------------------------------------------------->
-                 <h1>Webmaster Tools</h1>
+             <div id=tools>     
+                <h1>Webmaster Tools</h1>
                     <form>
                        <fieldset>
                           <legend>Select a tool</legend>
@@ -310,7 +311,7 @@
                           </p>
                        </fieldset>
                     </form>
-                
+              </div>
                 <!--Add a Member-->
                     <div id = "addMember">
                         <form action = "/webmastertools/addmember.php" method = "post" name=addMemberForm>
