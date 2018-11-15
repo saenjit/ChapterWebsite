@@ -222,7 +222,7 @@
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "none"
-                                enableAccountPointer..style.display = "none"
+                                enableAccountPointer.style.display = "none"
                                 break;
                             case "2":
                                 addMemberPointer.style.display = "none"
@@ -231,7 +231,7 @@
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "none"
-                                enableAccountPointer..style.display = "none"
+                                enableAccountPointer.style.display = "none"
                                 break;
                             case "3":
                                 addMemberPointer.style.display = "none"
@@ -240,7 +240,7 @@
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "none"
-                                enableAccountPointer..style.display = "none"
+                                enableAccountPointer.style.display = "none"
                                 break;
                             case "4":
                                 addMemberPointer.style.display = "none"
@@ -249,7 +249,7 @@
                                 disableAccountPointer.style.display = "block"
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "none"
-                                enableAccountPointer..style.display = "none"
+                                enableAccountPointer.style.display = "none"
                                 break;
                             case "5":
                                 addMemberPointer.style.display = "none"
@@ -258,7 +258,7 @@
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "block"
                                 deleteMemberPointer.style.display = "none"
-                                enableAccountPointer..style.display = "none"
+                                enableAccountPointer.style.display = "none"
                                 break;
                             case "6":
                                 addMemberPointer.style.display = "none"
@@ -267,7 +267,7 @@
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "block"
-                                enableAccountPointer..style.display = "none"
+                                enableAccountPointer.style.display = "none"
                                 break;
                             case "7":
                                 addMemberPointer.style.display = "none"
@@ -285,7 +285,7 @@
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "none"
-                                enableAccountPointer..style.display = "none"
+                                enableAccountPointer.style.display = "none"
                         }
                     }
                 </script>
