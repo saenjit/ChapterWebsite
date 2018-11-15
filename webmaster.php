@@ -334,7 +334,9 @@
                                 echo "<select name='resetPasswordSelect' id='resetPasswordSelect'>";
                                 while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                                     $name                   = $r[ "Name" ];
-                                    echo "<option value='".$name"'>".$name."</option>";
+                                    echo "<option value='";
+                                    echo $name."'>";
+                                    echo $name."</option>";
                                 }
                                 echo "</select>";
                             ?>
