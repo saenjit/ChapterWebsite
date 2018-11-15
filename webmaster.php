@@ -291,8 +291,8 @@
                 <!--Check Last Login-->
                     <div id = "checkLastLogin">
                         Last Logins:
-                        <table>
                         <?php
+                            echo "<table>";
                             $s = "SELECT * FROM LoginTables";
                             $t = mysqli_query($db,$s) or die("Error loading SQL Table.");
 
@@ -304,8 +304,8 @@
                                 echo "<td>". $active. "</td>";
                                 echo "</tr>";
                             }
+                            echo "</table>";
                         ?>
-                        </table>
                     </div>
                 
                 <!--Reset a Password-->
