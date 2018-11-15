@@ -299,12 +299,12 @@
                              <label>Tool</label>
                              <select name = "webmasterTools" id = "webmasterTools" onchange="appear()">
                                <option value = "0">(select a tool)</option>
+                               <option value = "5">Check Active Accounts</option>
                                <option value = "1">Add a Member</option>
+                               <option value = "6">Delete a Member</option>
                                <option value = "2">Check Last Login Date</option>
                                <option value = "3">Reset a Password</option>
                                <option value = "4">Disable an Account</option>
-                               <option value = "5">Check Active Accounts</option>
-                               <option value = "6">Delete a Member</option>
                                <option value = "7">Enable an Account</option>
                              </select>
                           </p>
