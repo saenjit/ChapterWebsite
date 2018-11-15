@@ -218,6 +218,7 @@
                                 resetPasswordPointer.style.display = "none"
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "none"
+                                deleteMemberPointer.style.display = "none"
                                 break;
                             case "2":
                                 addMemberPointer.style.display = "none"
@@ -225,6 +226,7 @@
                                 resetPasswordPointer.style.display = "none"
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "none"
+                                deleteMemberPointer.style.display = "none"
                                 break;
                             case "3":
                                 addMemberPointer.style.display = "none"
@@ -232,6 +234,7 @@
                                 resetPasswordPointer.style.display = "block"
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "none"
+                                deleteMemberPointer.style.display = "none"
                                 break;
                             case "4":
                                 addMemberPointer.style.display = "none"
@@ -239,6 +242,7 @@
                                 resetPasswordPointer.style.display = "none"
                                 disableAccountPointer.style.display = "block"
                                 checkActiveAccountsPointer.style.display = "none"
+                                deleteMemberPointer.style.display = "none"
                                 break;
                             case "5":
                                 addMemberPointer.style.display = "none"
@@ -246,6 +250,7 @@
                                 resetPasswordPointer.style.display = "none"
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "block"
+                                deleteMemberPointer.style.display = "none"
                                 break;
                             case "6":
                                 addMemberPointer.style.display = "none"
@@ -261,6 +266,7 @@
                                 resetPasswordPointer.style.display = "none"
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "none"
+                                deleteMemberPointer.style.display = "none"
                         }
                     }
                 </script>
