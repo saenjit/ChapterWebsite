@@ -305,7 +305,7 @@
                                <option value = "4">Disable an Account</option>
                                <option value = "5">Check Active Accounts</option>
                                <option value = "6">Delete a Member</option>
-                               <option value = "6">Enable an Account</option>
+                               <option value = "7">Enable an Account</option>
                              </select>
                           </p>
                        </fieldset>
