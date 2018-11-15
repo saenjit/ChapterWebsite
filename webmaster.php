@@ -205,6 +205,7 @@
                         resetPasswordPointer = document.getElementById("resetPassword")
                         disableAccountPointer = document.getElementById("disableAccount")
                         checkActiveAccountsPointer = document.getElementById("checkActiveAccounts")
+                        deleteMemberPointer = document.getElementById("deleteMember")
                         dropDownMenu = document.getElementById("webmasterTools")
                         $toolChoice = dropDownMenu.value
 
@@ -245,6 +246,14 @@
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "block"
                                 break;
+                            case "6":
+                                addMemberPointer.style.display = "none"
+                                checkLastLoginPointer.style.display = "none"
+                                resetPasswordPointer.style.display = "none"
+                                disableAccountPointer.style.display = "none"
+                                checkActiveAccountsPointer.style.display = "none"
+                                deleteMemberPointer.style.display = "block"
+                                break;
                             default:
                                 addMemberPointer.style.display = "none"
                                 checkLastLoginPointer.style.display = "none"
@@ -269,6 +278,7 @@
                                <option value = "3">Reset a Password</option>
                                <option value = "4">Disable an Account</option>
                                <option value = "5">Check Active Accounts</option>
+                               <option value = "6">Delete a Member</option>
                              </select>
                           </p>
                        </fieldset>
@@ -321,6 +331,10 @@
                 <!--Check Active Accounts-->
                     <div id = "checkActiveAccounts">
                         checkActiveAccounts
+                    </div>
+                <!--Check Active Accounts-->
+                    <div id = "deleteMember">
+                        deleteMember
                     </div>
               <!-- single-blog end -->
             </div>
