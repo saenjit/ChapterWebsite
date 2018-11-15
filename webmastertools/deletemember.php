@@ -27,7 +27,9 @@
 <?php
     $s = "DELETE FROM LoginTable WHERE Name = '$name'"; 
     $t = mysqli_query($db,$s) or die("Deleting member failed.");
-    print("Member successfully deleted.");
-    sleep(5);
-    header("location:/webmaster.php");
+    echo"
+        <script>
+            alert(\"Member successfully deleted.\");
+            window.location.replace(\"http://saenjit.com/webmaster.php\");
+        </script>";
 ?>
