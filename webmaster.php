@@ -197,6 +197,8 @@
                     #disableAccount {display: none;}
                     #checkActiveAccounts {display: none;}
                     #deleteMember {display: none;}
+                    #enableAccount {display: none;}
+                    #enableAccount {display: none;}
                 </style> 
 
                 <script>
@@ -207,6 +209,7 @@
                         disableAccountPointer = document.getElementById("disableAccount")
                         checkActiveAccountsPointer = document.getElementById("checkActiveAccounts")
                         deleteMemberPointer = document.getElementById("deleteMember")
+                        enableAccountPointer = document.getElementById("enableAccount")
                         dropDownMenu = document.getElementById("webmasterTools")
                         $toolChoice = dropDownMenu.value
 
@@ -219,6 +222,7 @@
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "none"
+                                enableAccountPointer..style.display = "none"
                                 break;
                             case "2":
                                 addMemberPointer.style.display = "none"
@@ -227,6 +231,7 @@
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "none"
+                                enableAccountPointer..style.display = "none"
                                 break;
                             case "3":
                                 addMemberPointer.style.display = "none"
@@ -235,6 +240,7 @@
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "none"
+                                enableAccountPointer..style.display = "none"
                                 break;
                             case "4":
                                 addMemberPointer.style.display = "none"
@@ -243,6 +249,7 @@
                                 disableAccountPointer.style.display = "block"
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "none"
+                                enableAccountPointer..style.display = "none"
                                 break;
                             case "5":
                                 addMemberPointer.style.display = "none"
@@ -251,6 +258,7 @@
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "block"
                                 deleteMemberPointer.style.display = "none"
+                                enableAccountPointer..style.display = "none"
                                 break;
                             case "6":
                                 addMemberPointer.style.display = "none"
@@ -259,6 +267,16 @@
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "block"
+                                enableAccountPointer..style.display = "none"
+                                break;
+                            case "7":
+                                addMemberPointer.style.display = "none"
+                                checkLastLoginPointer.style.display = "none"
+                                resetPasswordPointer.style.display = "none"
+                                disableAccountPointer.style.display = "none"
+                                checkActiveAccountsPointer.style.display = "none"
+                                deleteMemberPointer.style.display = "none"
+                                enableAccountPointer..style.display = "block"
                                 break;
                             default:
                                 addMemberPointer.style.display = "none"
@@ -267,6 +285,7 @@
                                 disableAccountPointer.style.display = "none"
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "none"
+                                enableAccountPointer..style.display = "none"
                         }
                     }
                 </script>
@@ -286,6 +305,7 @@
                                <option value = "4">Disable an Account</option>
                                <option value = "5">Check Active Accounts</option>
                                <option value = "6">Delete a Member</option>
+                               <option value = "6">Enable an Account</option>
                              </select>
                           </p>
                        </fieldset>
@@ -402,6 +422,25 @@
                                 echo "</select>";
                             ?>
                             <input type = submit value = "Delete Member">
+                        </form>
+                    </div>
+                <!--Enable an Account-->
+                    <div id = "enableAccount">
+                        <form action = "/webmastertools/enableaccount.php" method = "post" name=enableAccountForm id=enableAccountForm>
+                            <?php
+                                $s = "SELECT * FROM LoginTable";
+                                $t = mysqli_query($db,$s);
+                                echo "<select name='enableAccountSelect' id='enableAccountSelect'>";
+                                echo "<option>(select an account)</option>";
+                                while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+                                    $name                   = $r[ "Name" ];
+                                    echo "<option value='";
+                                    echo $name."'>";
+                                    echo $name."</option>";
+                                }
+                                echo "</select>";
+                            ?>
+                            <input type = submit value = "Enable Account">
                         </form>
                     </div>
               <!-- single-blog end -->
