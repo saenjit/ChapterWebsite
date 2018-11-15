@@ -20,8 +20,8 @@
                 </script>";
                 exit();
             }
-            $name = $_SESSION['name'];
-            $email = $_SESSION['email'];
+            $name = $_POST['name'];
+            $email = $_POST['email'];
 
         ?>
 <!------------------------------------------------------------------->
