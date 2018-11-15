@@ -276,7 +276,7 @@
                 
                 <!--Add a Member-->
                     <div id = "addMember">
-                        <form action = "nothing" method = "post" name=addMemberForm>
+                        <form action = "/webmastertools/addmember.php" method = "post" name=addMemberForm>
                             <fieldset id="field"><legend>Please enter the new account information.</legend>
                             <!--Account Info-->
                             Full Name:&nbsp;<input name=name id=name autocomplete="off" placeholder="Ananya Singh" required><br><br>
