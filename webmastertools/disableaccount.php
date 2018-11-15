@@ -27,7 +27,9 @@
 <?php
     $s = "UPDATE LoginTable SET Active = 'no' WHERE Name = '$name'"; 
     $t = mysqli_query($db,$s) or die("Disabling account failed.");
-    print("Successfully disabled account.");
-    sleep(5);
-    header("location:/webmaster.php");
+    echo"
+        <script>
+            alert(\"Successfully disabled account.\");
+            window.location.replace(\"http://saenjit.com/webmaster.php\");
+        </script>";
 ?>

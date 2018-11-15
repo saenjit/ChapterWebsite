@@ -27,7 +27,9 @@
 <?php
     $s = "UPDATE LoginTable SET Active = '' WHERE Name = '$name'"; 
     $t = mysqli_query($db,$s) or die("Resetting password failed.");
-    print("Successfully reset password.");
-    sleep(5);
-    header("location:/webmaster.php");
+    echo"
+        <script>
+            alert(\"Successfully reset password.\");
+            window.location.replace(\"http://saenjit.com/webmaster.php\");
+        </script>";
 ?>

@@ -28,7 +28,9 @@
 <?php
     $s = "INSERT INTO LoginTable VALUES ('$name','$email','','','')"; 
     $t = mysqli_query($db,$s) or die("Adding a member failed.");
-    print("Member successfully added.");
-    sleep(5);
-    header("location:/webmaster.php");
+    echo"
+        <script>
+            alert(\"Member successfully added.\");
+            window.location.replace(\"http://saenjit.com/webmaster.php\");
+        </script>";
 ?>
