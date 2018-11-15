@@ -309,7 +309,7 @@
                     <div id = "checkLastLogin">
                         Last Logins:
                         <?php
-                            echo "<table border=2 cellpadding="10">";
+                            echo "<table border="2" cellpadding="10">";
                             $s = "SELECT * FROM LoginTable";
                             $t = mysqli_query($db,$s) or die("Error loading SQL Table.");
 
@@ -339,7 +339,7 @@
                     <div id = "checkActiveAccounts">
                         Account Status:
                         <?php
-                            echo "<table border=2 cellpadding="10">";
+                            echo "<table border="2" cellpadding="10">";
                             $s = "SELECT * FROM LoginTable";
                             $t = mysqli_query($db,$s) or die("Error loading SQL Table.");
 
