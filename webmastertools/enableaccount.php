@@ -30,6 +30,6 @@
     echo"
         <script>
             alert(\"Successfully enabled account.\");
-            window.location.replace(\"http://saenjit.com/webmaster.php\");
+            window.location.replace(\"http://saenjit.com/webmaster.php#tools\");
         </script>";
 ?>

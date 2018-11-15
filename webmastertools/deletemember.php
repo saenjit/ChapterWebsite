@@ -30,6 +30,6 @@
     echo"
         <script>
             alert(\"Member successfully deleted.\");
-            window.location.replace(\"http://saenjit.com/webmaster.php\");
+            window.location.replace(\"http://saenjit.com/webmaster.php#tools\");
         </script>";
 ?>
