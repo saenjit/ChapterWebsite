@@ -52,7 +52,8 @@
             //grab active status from database & permissions
             while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                 $active 				= $r[ "Active" ];
-                $permission             = $r[ "Permissions" ];
+                $permissions            = $r[ "Permissions" ];
+                $name                   = $r[ "Name" ];
             }
 
             //Last test to make sure account isnt disabled
@@ -66,8 +67,9 @@
                 exit();
             }
             
-            //Set logged to true cause they passed authentication
+            //Set logged to true because they passed authentication
             $_SESSION["login"] = true;
+            $_SESSION["name"] = $name;
 
         if ($active == "first"){
             echo"
@@ -76,10 +78,11 @@
                     window.location.replace(\"http://saenjit.com/changepassword.php\");
                 </script>";
         }else{
-            if ($permission == "W"){
+            if ($permissions == "W"){
                 header("location:webmaster.php");
                 $_SESSION["webmaster"] = true;
             }else{
+                $_SESSION["permissions"] = $permissions;
                 header("location:members.php");
             }
         }
