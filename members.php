@@ -43,13 +43,13 @@
 
             //End Positions
             
-            if ($permissions == "S") {
+            /*if ($permissions == "S") {
                 $Scholarship = true;
             }
             if ($permissions == "T") {
                 $Treasurer = true;
                 $_SESSION['treasurer'] = true;
-            }
+            }*/
         ?>
 <!------------------------------------------------------------------->
 
