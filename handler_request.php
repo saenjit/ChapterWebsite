@@ -56,6 +56,15 @@
                 </script>";
                 exit();
             }
+            if ($active == 'no'){
+                echo"
+                <script>
+                    alert(\"Your account is disabled. Please contact the ~Webmaster~.\");
+                    window.location.replace(\"http://saenjit.com/memberlogin.html\");
+                </script>";
+                mail("tam44@njit.edu", "Disabled Account Attempted to Log In", $email." Attempted to log in.");
+                exit();
+            }
 
             //Successfully passed all tests:
             $randompassword = random_pass(6);//randomPassword(6,1,"lower_case");
