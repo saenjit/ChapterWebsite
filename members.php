@@ -229,7 +229,7 @@
                     
                     
                     //PHP to Javascript Variables
-                    treasurer =.$Treasurer. 
+                    treasurer =".$Treasurer." 
                     console.log(treasurer)
                     //If statements
                     if (treasurer){
