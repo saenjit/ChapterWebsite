@@ -47,6 +47,9 @@
             if (strpos($permissions, "S") === TRUE) {
                 $scholarship = true;
             }
+            if (strpos($permissions, "T") === TRUE) {
+                $Treasurer = true;
+            }
         ?>
 <!------------------------------------------------------------------->
 
@@ -156,7 +159,7 @@
           <div class="slider-content text-center">
             <div class="header-bottom">
               <div class="layer2 wow zoomIn" data-wow-duration="1s" data-wow-delay=".4s">
-                <h1 class="title2">Phi Alpha,<?php echo $name ?>. </h1>
+                <h1 class="title2">Phi Alpha, <?php echo $name ?>. </h1>
               </div>
               <div class="layer3 wow zoomInUp" data-wow-duration="2s" data-wow-delay="1s">
                 <h2 class="title3">Welcome to the Members-only section</h2>
@@ -207,7 +210,31 @@
         <div class="col-md-8 col-sm-8 col-xs-12">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <div>
+                <style>
+                    #treasurer{display:none;}
+                </style>
+                <script>
+                    //Pointers
+                    treasurerPointer = document.getElementById("treasurer")
+                    
+                    
+                    //PHP to Javascript Variables
+                    treasurer = <?php echo $treasurer ?>
+                    
+                    
+                    //If statements
+                    if (treasurer){
+                        treasurerPointer.style.display = "block"
+                    }
+                </script>
+                
+                
+                
+                
+                
+                <div id=treasurer>
+                    TEST TREASURER
+                    <hr>
                 </div>
               <!-- single-blog start -->
               <div class="clear"></div>
