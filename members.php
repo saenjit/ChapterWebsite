@@ -49,6 +49,7 @@
             }
             if ($permissions == "T") {
                 $Treasurer = true;
+                $_SESSION['treasurer'] = true;
             }
         ?>
 <!------------------------------------------------------------------->
@@ -216,7 +217,11 @@
                 </style>
                 
                 <div id=treasurer>
-                    TEST TREASURER
+                    <form action="handler_treasurers.php" method="post" enctype="multipart/form-data">
+                        Select image to upload:
+                        <input type="file" name="fileToUpload" id="fileToUpload">
+                        <input type="submit" value="Upload Image" name="submit">
+                    </form>
                     <hr>
                 </div>
                 
