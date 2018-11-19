@@ -44,7 +44,7 @@
 
             //End Positions
             
-            if (strpos($permissions, "S") === TRUE) {
+            if ($permissions == "S") {
                 $Scholarship = true;
             }
             if ($permissions == "T") {
