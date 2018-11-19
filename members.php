@@ -232,7 +232,7 @@
                     treasurer =".$Treasurer." 
                     console.log(treasurer)
                     //If statements
-                    if (treasurer){
+                    if (!treasurer){
                         treasurerPointer.style.display = 'block'
                     }
                 </script>
