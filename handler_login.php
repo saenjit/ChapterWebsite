@@ -52,7 +52,6 @@
             //grab active status from database & permissions
             while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                 $active 				= $r[ "Active" ];
-                $permissions            = $r[ "Permissions" ];
                 $name                   = $r[ "Name" ];
             }
 
@@ -78,11 +77,10 @@
                     window.location.replace(\"http://saenjit.com/changepassword.php\");
                 </script>";
         }else{
-            if ($permissions == "W"){
+            if ($email == "webmaster"){
                 header("location:webmaster.php");
                 $_SESSION["webmaster"] = true;
             }else{
-                $_SESSION["permissions"] = $permissions;
                 header("location:members.php");
             }
         }
