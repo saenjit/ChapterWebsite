@@ -231,16 +231,14 @@
                     treasurer = <?php echo $Treasurer ?>
                     
                 </script>
-                <?php
-                    echo"
+                
                     <script>
                         //If statements
-                        if (!treasurer){
+                        if (true){
                             treasurerPointer.style.display = 'block'
                         }
                     </script>
-                    ";
-                ?>
+                   
                 
                 
                 
