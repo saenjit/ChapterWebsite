@@ -48,14 +48,6 @@
                 $active 				= $r[ "Active" ];
             }
             
-            if ($active != ''){
-                echo"
-                <script>
-                    alert(\"Your account is already active! Please log in. If you forgot your password, please contact the ~Webmaster~!\");
-                    window.location.replace(\"http://saenjit.com/memberlogin.html\");
-                </script>";
-                exit();
-            }
             if ($active == 'no'){
                 echo"
                 <script>
@@ -63,6 +55,14 @@
                     window.location.replace(\"http://saenjit.com/memberlogin.html\");
                 </script>";
                 mail("tam44@njit.edu", "Disabled Account Attempted to Log In", $email." Attempted to log in.");
+                exit();
+            }
+            if ($active != ''){
+                echo"
+                <script>
+                    alert(\"Your account is already active! Please log in. If you forgot your password, please contact the ~Webmaster~!\");
+                    window.location.replace(\"http://saenjit.com/memberlogin.html\");
+                </script>";
                 exit();
             }
 
