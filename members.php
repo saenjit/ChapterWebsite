@@ -222,21 +222,13 @@
                 
                 
             <?php
-                echo"
-                <script>
-                    //Pointers
-                    treasurerPointer = document.getElementById('treasurer')
-                    
-                    
-                    //PHP to Javascript Variables
-                    treasurer =".$Treasurer." 
-                    console.log(treasurer)
-                    //If statements
-                    if (!treasurer){
-                        treasurerPointer.style.display = 'block'
-                    }
-                </script>
-                ";
+                if ($treasurer){
+                    echo"
+                    <script>
+                        document.getElementById('treasurer').style.display = 'block'
+                    </script>
+                    ";
+                }
             ?>
                    
                 
