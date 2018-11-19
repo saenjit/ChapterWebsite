@@ -223,7 +223,7 @@
                     
                     
                     //If statements
-                    if (treasurer){
+                    if (!treasurer){
                         treasurerPointer.style.display = "block"
                     }
                 </script>
