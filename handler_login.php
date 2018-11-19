@@ -49,9 +49,10 @@
                 </script>";
                 exit();
             }
-            //grab active status from database
+            //grab active status from database & permissions
             while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                 $active 				= $r[ "Active" ];
+                $permission             = $r[ "Permissions" ];
             }
 
             //Last test to make sure account isnt disabled
@@ -75,7 +76,7 @@
                     window.location.replace(\"http://saenjit.com/changepassword.php\");
                 </script>";
         }else{
-            if ($email == "webmaster"){
+            if ($permission == "W"){
                 header("location:webmaster.php");
                 $_SESSION["webmaster"] = true;
             }else{
