@@ -45,9 +45,9 @@
             //End Positions
             
             if (strpos($permissions, "S") === TRUE) {
-                $scholarship = true;
+                $Scholarship = true;
             }
-            if (strpos($permissions, "T") === TRUE) {
+            if ($permissions == "T") {
                 $Treasurer = true;
             }
         ?>
