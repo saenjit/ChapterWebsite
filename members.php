@@ -236,7 +236,7 @@
                     <script>
                         //If statements
                         if (!treasurer){
-                            treasurerPointer.style.display = 'block's
+                            treasurerPointer.style.display = 'block'
                         }
                     </script>
                     ";
