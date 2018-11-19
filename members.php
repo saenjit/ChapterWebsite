@@ -222,7 +222,7 @@
                 
                 
             <?php
-                if ($treasurer){
+                if ($Treasurer){
                     echo"
                     <script>
                         document.getElementById('treasurer').style.display = 'block'
