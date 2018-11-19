@@ -221,21 +221,23 @@
                 </div>
                 
                 
-                
+            <?php
+                echo"
                 <script>
                     //Pointers
-                    treasurerPointer = document.getElementById("treasurer")
+                    treasurerPointer = document.getElementById('treasurer')
                     
                     
                     //PHP to Javascript Variables
-                    treasurer = <?php echo $Treasurer ?>
-                    
+                    treasurer =.$Treasurer. 
+                    console.log(treasurer)
                     //If statements
-                        
-                            treasurerPointer.style.display = 'block'
-                        
+                    if (treasurer){
+                        treasurerPointer.style.display = 'block'
+                    }
                 </script>
-                
+                ";
+            ?>
                    
                 
                 
