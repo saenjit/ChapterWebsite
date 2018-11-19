@@ -230,14 +230,12 @@
                     //PHP to Javascript Variables
                     treasurer = <?php echo $Treasurer ?>
                     
-                </script>
-                
-                    <script>
-                        //If statements
+                    //If statements
                         if (true){
                             treasurerPointer.style.display = 'block'
                         }
-                    </script>
+                </script>
+                
                    
                 
                 
