@@ -211,35 +211,6 @@
         <div class="col-md-8 col-sm-8 col-xs-12">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <!--Don't display unless they have permission -->
-                <style>
-                    #treasurer{display:none;}
-                </style>
-                
-                <div id=treasurer>
-                    <form action="handler_treasurer.php" method="post" enctype="multipart/form-data">
-                        Select image to upload:
-                        <input type="file" name="fileToUpload" id="fileToUpload">
-                        <input type="submit" value="Upload Image" name="submit">
-                    </form>
-                    <hr>
-                </div>
-                
-                
-            <?php
-                if ($Treasurer){
-                    echo"
-                    <script>
-                        document.getElementById('treasurer').style.display = 'block'
-                    </script>
-                    ";
-                }
-            ?>
-                   
-                
-                
-                
-                
               <!-- single-blog start -->
               <div class="clear"></div>
                 <!-- begin wwww.htmlcommentbox.com -->
