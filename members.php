@@ -219,7 +219,7 @@
                     
                     
                     //PHP to Javascript Variables
-                    treasurer = <?php echo $treasurer ?>
+                    treasurer = <?php echo $Treasurer ?>
                     
                     
                     //If statements
