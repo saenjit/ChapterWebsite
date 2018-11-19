@@ -210,9 +210,18 @@
         <div class="col-md-8 col-sm-8 col-xs-12">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
+                <!--Don't display unless they have permission -->
                 <style>
                     #treasurer{display:none;}
                 </style>
+                
+                <div id=treasurer>
+                    TEST TREASURER
+                    <hr>
+                </div>
+                
+                
+                
                 <script>
                     //Pointers
                     treasurerPointer = document.getElementById("treasurer")
@@ -221,21 +230,21 @@
                     //PHP to Javascript Variables
                     treasurer = <?php echo $Treasurer ?>
                     
-                    
-                    //If statements
-                    if (!treasurer){
-                        treasurerPointer.style.display = "block"
-                    }
                 </script>
+                <?php
+                    echo"
+                    <script>
+                        //If statements
+                        if (!treasurer){
+                            treasurerPointer.style.display = 'block's
+                        }
+                    </script>
+                    ";
+                ?>
                 
                 
                 
                 
-                
-                <div id=treasurer>
-                    TEST TREASURER
-                    <hr>
-                </div>
               <!-- single-blog start -->
               <div class="clear"></div>
                 <!-- begin wwww.htmlcommentbox.com -->
