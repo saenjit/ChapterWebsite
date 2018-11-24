@@ -189,7 +189,7 @@
                 <h4>Documents/Links</h4>
                 <ul>
                   <li>
-                    <a href="<?php $_SESSION['document'] = 'budget';
+                    <a href="<?php $_SESSION['document'] = 'BudgetF18.pdf';
                                     echo "/documents/BudgetF18";?>">Budget</a>
                   </li>
                   <li>

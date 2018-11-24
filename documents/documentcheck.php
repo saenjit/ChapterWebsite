@@ -20,7 +20,8 @@
                 </script>";
                 exit();
             }
-            readfile("/documents/BudgetF18.pdf");
+            $document = $_SESSION['document'];
+            readfile("/documents/".$document);
 
         ?>
 <!------------------------------------------------------------------->
