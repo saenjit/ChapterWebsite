@@ -189,7 +189,7 @@
                 <h4>Documents/Links</h4>
                 <ul>
                   <li>
-                    <a href="/documents/BudgetF18.pdf">Budget</a>
+                    <a href="<?php readfile("/documents/BudgetF18.pdf");  ?>">Budget</a>
                   </li>
                   <li>
                     <a href="/documents/FundraisingF18.pdf">Fundraising</a>
