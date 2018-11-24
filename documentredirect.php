@@ -4,10 +4,12 @@
     error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
     ini_set('display_errors' , 1);
     $_SESSION['document'] = $_POST['documentSelect'];
-    header("location:/documents/".$_SESSION['document']);
-    
+
     echo"
     <script>
         alert(".$_SESSION['document'."])
     </script>";
+
+    header("location:/documents/".$_SESSION['document']);
+    
 ?>
