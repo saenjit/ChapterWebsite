@@ -20,7 +20,7 @@
                 </script>";
                 exit();
             }
-            $document = $_SESSION['document'];
+            $document = $_POST['documentSelect'];
             
             $file = $document;
             $filename = $document;

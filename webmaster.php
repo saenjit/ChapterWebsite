@@ -172,20 +172,22 @@
                   
 <!--Documents and Links Section-->
                 <h4>Documents/Links</h4>
-                <ul>
-                  <li>
-                    <a href="<?php documentRedirect("BudgetF18.pdf");?>">Budget</a>
-                  </li>
-                  <li>
-                    <a href="<?php documentRedirect("FundraisingF18.pdf");?>">Fundraising</a>
-                  </li>
-                  <li>
-                    <a href="<?php documentRedirect("PhilanthropyF18.pdf");?>">Philanthropy</a>
-                  </li>
-                  <li>
-                    <a href="<?php documentRedirect("SlushF18.pdf");?>">Slush</a>
-                  </li>
-                </ul>
+                    <form action = "/documents/documentcheck.php" method = "post" name=documentForm id=documentForm>
+                        <?php
+                            $s = "SELECT * FROM FilesForWebsite";
+                            $t = mysqli_query($db,$s);
+                            echo "<select name='documentsSelect' id='documentsSelect'>";
+                            echo "<option>(select a document to view)</option>";
+                            while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+                                $name                   = $r[ "Filename" ];
+                                echo "<option value='";
+                                echo $name."'>";
+                                echo $name."</option>";
+                            }
+                            echo "</select>";
+                        ?>
+                        <input type = submit value = "View">
+                    </form>
               </div>
             </div>
           </div>
