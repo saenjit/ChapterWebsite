@@ -189,9 +189,7 @@
                 <h4>Documents/Links</h4>
                 <ul>
                   <li>
-                    <a href="<?php header('Content-disposition: attachment; filename= BudgetF18.pdf');
-                                   header('Content-type: application/pdf');
-                                   readfile("~/documents/BudgetF18.pdf");  ?>">Budget</a>
+                    <a href="/documents/BudgetF18.pdf">Budget</a>
                   </li>
                   <li>
                     <a href="/documents/FundraisingF18.pdf">Fundraising</a>
