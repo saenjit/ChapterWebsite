@@ -10,6 +10,6 @@
         alert(".$_SESSION['document'].")
     </script>";
 
-    header("location:/documents/".$_SESSION['document']);
+    //header("location:/documents/".$_SESSION['document']);
     
 ?>
