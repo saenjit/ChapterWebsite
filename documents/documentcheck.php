@@ -15,7 +15,7 @@
             if (!$_SESSION['login']){
                 echo"
                 <script>
-                    alert(\"Not logged in...\");
+                    alert(\"You need to log in before you can view files!\");
                     window.location.replace(\"http://saenjit.com/memberlogin.html\");
                 </script>";
                 exit();
