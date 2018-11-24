@@ -7,7 +7,7 @@
 
     echo"
     <script>
-        alert(".$_SESSION['document'."])
+        alert(".$_SESSION['document'].")
     </script>";
 
     header("location:/documents/".$_SESSION['document']);
