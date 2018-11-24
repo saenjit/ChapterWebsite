@@ -5,4 +5,9 @@
     ini_set('display_errors' , 1);
     $_SESSION['document'] = $_POST['documentSelect'];
     header("location:/documents/".$_SESSION['document']);
+    
+    echo"
+    <script>
+        alert(".$_SESSION['document'."])
+    </script>";
 ?>
