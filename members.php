@@ -52,6 +52,14 @@
             }*/
         ?>
 <!------------------------------------------------------------------->
+<!----------------------------Functions------------------------------>
+<?php
+    function documentRedirect($name){
+        $_SESSION['document'] = $name;
+        echo "/documents/".$name;
+    }
+?>
+<!------------------------------------------------------------------->
 
 <!Doctype html>
 <html lang="en">
@@ -189,17 +197,16 @@
                 <h4>Documents/Links</h4>
                 <ul>
                   <li>
-                    <a href="<?php $_SESSION['document'] = 'BudgetF18.pdf';
-                                    echo "/documents/BudgetF18";?>">Budget</a>
+                    <a href="<?php documentRedirect("BudgetF18.pdf");?>">Budget</a>
                   </li>
                   <li>
-                    <a href="/documents/FundraisingF18.pdf">Fundraising</a>
+                    <a href="<?php documentRedirect("FundraisingF18.pdf");?>">Fundraising</a>
                   </li>
                   <li>
-                    <a href="/documents/PhilanthropyF18.pdf">Philanthropy</a>
+                    <a href="<?php documentRedirect("PhilanthropyF18.pdf");?>">Philanthropy</a>
                   </li>
                   <li>
-                    <a href="/documents/SlushF18.pdf">Slush</a>
+                    <a href="<?php documentRedirect("SlushF18.pdf");?>">Slush</a>
                   </li>
                 </ul>
               </div>
