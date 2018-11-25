@@ -188,7 +188,7 @@
 <!--Documents and Links Section-->
                 <h4>Documents/Links</h4>
                 <!--Redirects to documentredirect.php, which with get with post which document and then redirect to appropriate document-->
-                <div style="margain:auto;">
+                <div style="margin: auto;">
                     <form action = "/documentredirect.php" method = "post" name=documentForm id=documentForm>
                         <?php
                             $s = "SELECT * FROM FilesForWebsite";
