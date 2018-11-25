@@ -29,14 +29,6 @@
 
         ?>
 <!------------------------------------------------------------------->
-<!----------------------------Functions------------------------------>
-<?php
-    function documentRedirect($name){
-        $_SESSION['document'] = $name;
-        echo "/documents/".$name;
-    }
-?>
-<!------------------------------------------------------------------->
 
 <!Doctype html>
 <html lang="en">
@@ -178,7 +170,7 @@
                         $s = "SELECT * FROM FilesForWebsite";
                         $t = mysqli_query($db,$s);
                         echo "<select name='documentsSelect' id='documentsSelect'>";
-                        echo "<option>(select a document to view)</option>";
+                        echo "<option value='none'>(select a document to view)</option>";
                         while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                             $name                   = $r[ "Filename" ];
                             echo "<option value='";
