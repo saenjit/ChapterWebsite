@@ -188,24 +188,22 @@
 <!--Documents and Links Section-->
                 <h4>Documents/Links</h4>
                 <!--Redirects to documentredirect.php, which with get with post which document and then redirect to appropriate document-->
-                <div style="margin: auto;">
-                    <form action = "/documentredirect.php" method = "post" name=documentForm id=documentForm>
-                        <?php
-                            $s = "SELECT * FROM FilesForWebsite";
-                            $t = mysqli_query($db,$s);
-                            echo "<select name='documentsSelect' id='documentsSelect'>";
-                            echo "<option value='none'>(select a document to view)</option>";
-                            while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
-                                $name                   = $r[ "Filename" ];
-                                echo "<option value='";
-                                echo $name."'>";
-                                echo $name."</option>";
-                            }
-                            echo "</select>";
-                        ?>
-                        <input type = submit value = "View">
-                    </form>
-                </div>
+                <form action = "/documentredirect.php" method = "post" name=documentForm id=documentForm>
+                    <?php
+                        $s = "SELECT * FROM FilesForWebsite";
+                        $t = mysqli_query($db,$s);
+                        echo "<select name='documentsSelect' id='documentsSelect'>";
+                        echo "<option value='none'>(select a document to view)</option>";
+                        while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+                            $name                   = $r[ "Filename" ];
+                            echo "<option value='";
+                            echo $name."'>";
+                            echo $name."</option>";
+                        }
+                        echo "</select>";
+                    ?>
+                    <input type = submit value = "View">
+                </form>
               </div>
             </div>
           </div>
