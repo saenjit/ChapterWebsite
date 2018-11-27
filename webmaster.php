@@ -474,7 +474,7 @@
                 <!--Change Contact Email-->
                     <div id = "changeContactEmail">
                         Select an account to make the contact form point it to.
-                        <form action = "/webmastertools/enableaccount.php" method = "post" name=chanceContactEmailForm id=chanceContactEmailForm>
+                        <form action = "/webmastertools/changecontactemail.php" method = "post" name=chanceContactEmailForm id=chanceContactEmailForm>
                             <?php
                                 $s = "SELECT * FROM LoginTable";
                                 $t = mysqli_query($db,$s);
