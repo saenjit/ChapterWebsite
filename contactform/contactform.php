@@ -18,7 +18,7 @@
 
     $message = "--Contact Form from saenjit.com: --   ";
     $message.= $_POST['message'];
-    $message.=" (This was sent from ".$email.".)";
+    $message.="     (This was sent from ".$email.".)";
     
     if (mail($sendToEmail, $subject, $message)){
         echo "
