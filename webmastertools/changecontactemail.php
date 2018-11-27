@@ -31,6 +31,7 @@
     $s = "UPDATE LoginTable SET Position = 'R' WHERE Name = '$name'";
     $t = mysqli_query($db,$s) or die("Added position to new member.");
 
+    echo "
         <script>
             alert(\"Contact email successfully changed.\");
             window.location.replace(\"http://saenjit.com/webmaster.php#tools\");
