@@ -201,7 +201,7 @@
                     #checkActiveAccounts {display: none;}
                     #deleteMember {display: none;}
                     #enableAccount {display: none;}
-                    #enableAccount {display: none;}
+                    #changeContactEmail {display: none;}
                 </style> 
 
                 <script>
@@ -213,6 +213,7 @@
                         checkActiveAccountsPointer = document.getElementById("checkActiveAccounts")
                         deleteMemberPointer = document.getElementById("deleteMember")
                         enableAccountPointer = document.getElementById("enableAccount")
+                        changeContactEmailPointer = document.getElementById("changeContactEmail")
                         dropDownMenu = document.getElementById("webmasterTools")
                         $toolChoice = dropDownMenu.value
 
@@ -226,6 +227,7 @@
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "none"
                                 enableAccountPointer.style.display = "none"
+                                changeContactEmailPointer.style.display = "none"
                                 break;
                             case "2":
                                 addMemberPointer.style.display = "none"
@@ -235,6 +237,7 @@
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "none"
                                 enableAccountPointer.style.display = "none"
+                                changeContactEmailPointer.style.display = "none"
                                 break;
                             case "3":
                                 addMemberPointer.style.display = "none"
@@ -244,6 +247,7 @@
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "none"
                                 enableAccountPointer.style.display = "none"
+                                changeContactEmailPointer.style.display = "none"
                                 break;
                             case "4":
                                 addMemberPointer.style.display = "none"
@@ -253,6 +257,7 @@
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "none"
                                 enableAccountPointer.style.display = "none"
+                                changeContactEmailPointer.style.display = "none"
                                 break;
                             case "5":
                                 addMemberPointer.style.display = "none"
@@ -262,6 +267,7 @@
                                 checkActiveAccountsPointer.style.display = "block"
                                 deleteMemberPointer.style.display = "none"
                                 enableAccountPointer.style.display = "none"
+                                changeContactEmailPointer.style.display = "none"
                                 break;
                             case "6":
                                 addMemberPointer.style.display = "none"
@@ -271,6 +277,7 @@
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "block"
                                 enableAccountPointer.style.display = "none"
+                                changeContactEmailPointer.style.display = "none"
                                 break;
                             case "7":
                                 addMemberPointer.style.display = "none"
@@ -280,6 +287,17 @@
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "none"
                                 enableAccountPointer.style.display = "block"
+                                changeContactEmailPointer.style.display = "none"
+                                break;
+                            case "8":
+                                addMemberPointer.style.display = "none"
+                                checkLastLoginPointer.style.display = "none"
+                                resetPasswordPointer.style.display = "none"
+                                disableAccountPointer.style.display = "none"
+                                checkActiveAccountsPointer.style.display = "none"
+                                deleteMemberPointer.style.display = "none"
+                                enableAccountPointer.style.display = "none"
+                                changeContactEmailPointer.style.display = "block"
                                 break;
                             default:
                                 addMemberPointer.style.display = "none"
@@ -289,6 +307,7 @@
                                 checkActiveAccountsPointer.style.display = "none"
                                 deleteMemberPointer.style.display = "none"
                                 enableAccountPointer.style.display = "none"
+                                changeContactEmailPointer.style.display = "none"
                         }
                     }
                 </script>
@@ -311,6 +330,7 @@
                                <option value = "3">Reset a Password</option>
                                <option value = "4">Disable an Account</option>
                                <option value = "7">Enable an Account</option>
+                               <option value = "8">Change Contact Form Email</option>
                              </select>
                           </p>
                        </fieldset>
@@ -439,6 +459,26 @@
                                 $s = "SELECT * FROM LoginTable";
                                 $t = mysqli_query($db,$s);
                                 echo "<select name='enableAccountSelect' id='enableAccountSelect'>";
+                                echo "<option>(select an account)</option>";
+                                while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+                                    $name                   = $r[ "Name" ];
+                                    echo "<option value='";
+                                    echo $name."'>";
+                                    echo $name."</option>";
+                                }
+                                echo "</select>";
+                            ?>
+                            <input type = submit value = "Enable Account">
+                        </form>
+                    </div>
+                <!--Change Contact Email-->
+                    <div id = "changeContactEmail">
+                        Select an account to make the contact form point it to.
+                        <form action = "/webmastertools/enableaccount.php" method = "post" name=chanceContactEmailForm id=chanceContactEmailForm>
+                            <?php
+                                $s = "SELECT * FROM LoginTable";
+                                $t = mysqli_query($db,$s);
+                                echo "<select name='chanceContactEmailSelect' id='chanceContactEmailSelect'>";
                                 echo "<option>(select an account)</option>";
                                 while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                                     $name                   = $r[ "Name" ];
