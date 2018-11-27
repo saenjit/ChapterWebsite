@@ -29,11 +29,11 @@
     $t = mysqli_query($db,$s) or die("Removing position from previous member failed.");
 
     $s = "UPDATE LoginTable SET Position = 'R' WHERE Name = '$name'";
-    $t = mysqli_query($db,$s) or die("Added position to new member.");
+    $t = mysqli_query($db,$s) or die("Adding position to new member failed.");
 
     echo "
         <script>
             alert(\"Contact email successfully changed.\");
-            window.location.replace(\"http://saenjit.com/webmaster.php#tools\");
+            
         </script>";
 ?>
