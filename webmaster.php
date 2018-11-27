@@ -488,7 +488,7 @@
                                 }
                                 echo "</select>";
                             ?>
-                            <input type = submit value = "Enable Account">
+                            <input type = submit value = "Select this Account">
                         </form>
                     </div>
               <!-- single-blog end -->
