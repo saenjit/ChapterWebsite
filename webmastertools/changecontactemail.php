@@ -34,6 +34,6 @@
     echo "
         <script>
             alert(\"Contact email successfully changed.\");
-            
+            window.location.replace(\"http://saenjit.com/webmaster.php#tools\");
         </script>";
 ?>
