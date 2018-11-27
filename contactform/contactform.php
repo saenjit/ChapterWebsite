@@ -1,12 +1,9 @@
 <?php
-    include ("sqlaccount.php");
-
+    include ("sqlaccount.php") ;
     $db = mysqli_connect($hostname, $username, $password, $project);
-
     mysqli_select_db($db, $project); 
 
     $s = "select * from LoginTable where Position = 'R'" ;
-
     $t = mysqli_query($db,$s);
 
     while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
