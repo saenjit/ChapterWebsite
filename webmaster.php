@@ -478,7 +478,7 @@
                             <?php
                                 $s = "SELECT * FROM LoginTable";
                                 $t = mysqli_query($db,$s);
-                                echo "<select name='chanceContactEmailSelect' id='chanceContactEmailSelect'>";
+                                echo "<select name='changeContactEmailSelect' id='changeContactEmailSelect'>";
                                 echo "<option>(select an account)</option>";
                                 while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                                     $name                   = $r[ "Name" ];
