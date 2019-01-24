@@ -197,6 +197,7 @@
               <!-- single-blog start -->
               <div class="clear">
                 <h4>Smash Entries</h4>
+                    <div>Your current ranking is: NUMBER</div>
                 <table>
                     <tr>
                         <td></td>
