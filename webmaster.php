@@ -360,11 +360,9 @@
 
                             while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                                 $name                   = $r[ "Name" ];
-                                $email                  = $r[ "Email" ];
                                 $lastLogin				= $r[ "LastLogin" ];
                                 echo "<tr>";
                                 echo "<td>". $name. "</td>";
-                                echo "<td>". $email. "</td>";
                                 echo "<td>". $lastLogin. "</td>";
                                 echo "</tr>";
                             }
@@ -424,9 +422,11 @@
 
                             while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                                 $name                   = $r[ "Name" ];
-                                $active				= $r[ "Active" ];
+                                $email                  = $r[ "Email" ];
+                                $active				    = $r[ "Active" ];
                                 echo "<tr>";
                                 echo "<td>". $name. "</td>";
+                                echo "<td>". $email. "</td>";
                                 echo "<td>". $active. "</td>";
                                 echo "</tr>";
                             }
