@@ -170,27 +170,27 @@
                   <h4>Power Rankings</h4>
                   <ul>
                     <li>
-                      Current Champion: CHAMPION
+                      <?php echo "Current Champion: ".$rank1; ?>
                     </li>
                     <hr>
                     <li>
-                      2) Number2
+                      <?php echo "2) ".$rank2; ?>
                     </li>
                     <hr>
                     <li>
-                      3) Number3
+                      <?php echo "3) ".$rank3; ?>
                     </li>
                     <hr>
                     <li>
-                      4) Number4
+                      <?php echo "4) ".$rank4; ?>
                     </li>
                     <hr>
                     <li>
-                      5) Number5
+                      <?php echo "5) ".$rank5; ?>
                     </li>
                     <hr>
                     <li>
-                      Current Loser: Loser
+                      <?php echo "Current Loser: ".$rankLoser; ?>
                     </li>
                   </ul>
                 </div>
