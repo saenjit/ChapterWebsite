@@ -132,6 +132,9 @@
                     <a class="page-scroll" href="#home">Home</a>
                   </li>
                   <li>
+                    <a class="page-scroll" href="smash.php">Smash Portal</a>
+                  </li>
+                  <li>
                     <a class="page-scroll" href="changepassword.php">Change Password</a>
                   </li>
                   <li>
@@ -204,7 +207,6 @@
                     ?>
                     <input type = submit value = "View">
                 </form>
-                <li><a href="/smash.php">Smash Portal</a></li>
               </div>
             </div>
           </div>

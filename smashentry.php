@@ -108,7 +108,7 @@
                     <a class="page-scroll" href="#home">Home</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="addsmashentry.php">Add Entry</a>
+                    <a class="page-scroll" href="smash.php">Smash Portal</a>
                   </li>
                   <li>
                     <a class="page-scroll" href="memberlogout.php">Logout</a>
