@@ -212,7 +212,7 @@
                         $winner                   = $r[ "Winner" ];
                         $winningCharacter		  = $r[ "WinningCharacter" ];
                         $loser                    = $r[ "Loser" ];
-                        $losingCharacter		  = $r[ "LoserCharacter" ];
+                        $losingCharacter		  = $r[ "LosingCharacter" ];
                         $dateOfMatch    		  = $r[ "Date" ];
                         echo "<li>".$winner." as ".$winningCharacter." defeated ".$loser." as ".$losingCharacter." on ".$dateOfMatch.".</li>";
                         echo "<hr>";
