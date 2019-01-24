@@ -158,18 +158,23 @@
                     <li>
                       Current Champion: CHAMPION
                     </li>
+                    <hr>
                     <li>
                       2) Number2
                     </li>
+                    <hr>
                     <li>
                       3) Number3
                     </li>
+                    <hr>
                     <li>
                       4) Number4
                     </li>
+                    <hr>
                     <li>
                       5) Number5
                     </li>
+                    <hr>
                     <li>
                       Current Loser: Loser
                     </li>
