@@ -108,7 +108,7 @@
                     <a class="page-scroll" href="#home">Home</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="smashentry.php">Add Entry</a>
+                    <a class="page-scroll" href="addsmashentry.php">Add Entry</a>
                   </li>
                   <li>
                     <a class="page-scroll" href="memberlogout.php">Logout</a>
@@ -201,24 +201,13 @@
               <div class="clear">
                 <h4>Smash Entries</h4>
                 <hr>
-                <div>Your current ranking is: NUMBER</div>
-                <div>
-                    <ul>
-        <?php
-                    $s = "SELECT * FROM SmashRankingsTable";
-                    $t = mysqli_query($db,$s) or die("Error loading SQL Table.");
-
-                    while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
-                        $winner                   = $r[ "Winner" ];
-                        $winningCharacter		  = $r[ "WinningCharacter" ];
-                        $loser                    = $r[ "Loser" ];
-                        $losingCharacter		  = $r[ "LoserCharacter" ];
-                        $dateOfMatch    		  = $r[ "Date" ];
-                        echo "<li>".$winner." as ".$winningCharacter." defeated ".$loser." as ".$losingCharacter." on ".$dateOfMatch.".</li>"
-                    }
-        ?>
-                    </ul>
-               </div>
+                    <div>Your current ranking is: NUMBER</div>
+                <table>
+                    <tr>
+                        <td></td>
+                    </tr>  
+                </table>
+              </div>
               <!-- single-blog end -->
             </div>
           </div>
