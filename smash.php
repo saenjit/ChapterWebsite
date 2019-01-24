@@ -32,6 +32,18 @@
                 <script>
                     alert(\"The smash portal is still in beta. Please bare with me. -Todd\");
                 </script>";
+
+//calculate power rankings
+$rank1='1';
+$rank2='2';
+$rank3='3';
+$rank4='4';
+$rank5='5';
+$rankLoser='Loser';
+
+
+
+
         ?>
 <!------------------------------------------------------------------->
 
