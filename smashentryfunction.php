@@ -40,8 +40,16 @@
                 exit();
             }
 
+            //updates matches table
             $s = "INSERT INTO SmashRankingsTable VALUES ('$winner','$winningCharacter','$loser','$losingCharacter','$dateTime','$name')"; 
             $t = mysqli_query($db,$s) or die("Adding Entry Failed");
+
+            //updates character rankings
+            $s = "UPDATE SmashCharacterTable SET Wins = Wins + 1 WHERE Fighter = '$winningCharacter'";
+            $t = mysqli_query($db,$s) or die("Updating Character Stats Failed");
+
+            $s = "UPDATE SmashCharacterTable SET Loses = Loses - 1 WHERE Fighter = '$losingCharacter'";
+            $t = mysqli_query($db,$s) or die("Updating Character Stats Failed");
             echo"
                 <script>
                     alert(\"Entry successfully added. Your name has been recorded as well. Thank you!\");
