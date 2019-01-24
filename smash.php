@@ -214,7 +214,7 @@
                         $loser                    = $r[ "Loser" ];
                         $losingCharacter		  = $r[ "LosingCharacter" ];
                         $dateOfMatch    		  = $r[ "Date" ];
-                        echo "<li><span>".$winner."</span> as ".$winningCharacter." defeated <span style='color: #cfb53b;'>".$loser."</span> as ".$losingCharacter." on <b>".$dateOfMatch."</b>.</li>";
+                        echo "<li><span style='color:#7851A9;'>".$winner."</span> as <span style='color: #cfb53b;'>".$winningCharacter."</span> defeated <span style='color:#7851A9;'>".$loser."</span> as </span> as <span style='color: #cfb53b;'>".$losingCharacter."</span> on <b>".$dateOfMatch."</b>.</li>";
                         echo "<hr>";
                     }
         ?>
