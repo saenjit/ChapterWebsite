@@ -31,7 +31,7 @@
             $loser = $_POST['loserSelect'];
             $losingCharacter = $_POST['losingCharacterSelect'];
             
-            if ($winner == "(select an account)") || if ($loser == "(select an account)") || if ($winningCharacter == "(select a fighter)") || if ($losingCharacter == "(select a fighter)") {
+            if ($winner == "(select an account)" || $loser == "(select an account)" || $winningCharacter == "(select a fighter)" || $losingCharacter == "(select a fighter)") {
                 echo"
                     <script>
                         alert(\"Entry was not added. Please make sure you selected the names properly.\");
