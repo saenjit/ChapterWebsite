@@ -20,6 +20,11 @@
                 </script>";
                 exit();
             }
+            //creates datetime object and grabs email and name
+            date_default_timezone_set('America/New_York');
+            $dateTime = date("Y-m-d H:i:s");
+            $email = $_SESSION['email'];
+            $name = $_SESSION["name"];
 
         ?>
 <!------------------------------------------------------------------->
@@ -192,8 +197,6 @@
               <!-- single-blog start -->
               <div class="clear">
                 <h4>Smash Entries</h4>
-                <span>Current Champion:CHAMPION</span>
-                <span>Current Loser:CHAMPION</span>
                 <table>
                     <tr>
                         <td></td>
