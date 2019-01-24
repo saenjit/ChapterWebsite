@@ -37,6 +37,7 @@
                         alert(\"Entry was not added. Please make sure you selected the names properly.\");
                         window.location.replace(\"http://saenjit.com/smashentry.php#add\");
                     </script>";
+                exit();
             }
 
             $s = "INSERT INTO SmashRankingsTable VALUES ('$winner','$winningCharacter','$loser','$losingCharacter','$dateTime','$name')"; 
