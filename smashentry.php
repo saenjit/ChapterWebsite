@@ -138,7 +138,7 @@
                 <h1 class="title2">Phi Alpha, <?php echo $name ?>. </h1>
               </div>
               <div class="layer3 wow zoomInUp" data-wow-duration="2s" data-wow-delay="1s">
-                <h2 class="title3">Welcome to the Smash Portal!</h2>
+                <h2 class="title3">Please enter the match results below!</h2>
               </div>
             </div>
           </div>
