@@ -30,7 +30,15 @@
             $winningCharacter = $_POST['winningCharacterSelect'];
             $loser = $_POST['loserSelect'];
             $losingCharacter = $_POST['losingCharacterSelect'];
-        
+            
+            if ($winner == "(select an account)") || if ($loser == "(select an account)") || if ($winningCharacter == "(select a fighter)") || if ($losingCharacter == "(select a fighter)") {
+                echo"
+                    <script>
+                        alert(\"Entry was not added. Please make sure you selected the names properly.\");
+                        window.location.replace(\"http://saenjit.com/smashentry.php#add\");
+                    </script>";
+            }
+
             $s = "INSERT INTO SmashRankingsTable VALUES ('$winner','$winningCharacter','$loser','$losingCharacter','$dateTime','$name')"; 
             $t = mysqli_query($db,$s) or die("Adding Entry Failed");
             echo"

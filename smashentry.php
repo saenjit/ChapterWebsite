@@ -198,7 +198,7 @@
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
               <!-- single-blog start -->
-              <div class="clear">
+              <div class="clear" id="add">
                 <h4>Please enter the match details:</h4>
     
                   <form action = "/smashentryfunction.php" method = "post" name=smashEntryForm id=smashEntryForm>

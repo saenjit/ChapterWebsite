@@ -198,7 +198,7 @@
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
               <!-- single-blog start -->
-              <div class="clear">
+              <div class="clear" id="list">
                 <h4>Smash Entries</h4>
                 <hr>
                 <?php echo "<div>Your current ranking is:".$ranking."</div>"; ?>
