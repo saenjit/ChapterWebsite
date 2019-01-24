@@ -48,7 +48,7 @@
             $s = "UPDATE SmashCharacterTable SET Wins = Wins + 1 WHERE Fighter = '$winningCharacter'";
             $t = mysqli_query($db,$s) or die("Updating Character Stats Failed");
 
-            $s = "UPDATE SmashCharacterTable SET Loses = Loses - 1 WHERE Fighter = '$losingCharacter'";
+            $s = "UPDATE SmashCharacterTable SET Loses = Loses + 1 WHERE Fighter = '$losingCharacter'";
             $t = mysqli_query($db,$s) or die("Updating Character Stats Failed");
             echo"
                 <script>
