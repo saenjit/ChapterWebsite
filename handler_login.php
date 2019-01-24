@@ -53,6 +53,7 @@
             while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                 $active 				= $r[ "Active" ];
                 $name                   = $r[ "Name" ];
+                $ranking                = $r[ "Ranking" ];
             }
 
             //Last test to make sure account isnt disabled
@@ -69,6 +70,7 @@
             //Set logged to true because they passed authentication
             $_SESSION["login"] = true;
             $_SESSION["name"] = $name;
+            $_SESSION["ranking"] = $ranking;
 
         if ($active == "first"){
             echo"
