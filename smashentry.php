@@ -199,14 +199,85 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
               <!-- single-blog start -->
               <div class="clear">
-                <h4>Smash Entries</h4>
-                <hr>
-                    <div>Your current ranking is: NUMBER</div>
-                <table>
-                    <tr>
-                        <td></td>
-                    </tr>  
-                </table>
+                <h4>Please enter the match details:</h4>
+    
+                  <form action = "/smashentryfunction.php" method = "post" name=smashEntryForm id=smashEntryForm>
+                      <table>
+                        <tr>
+                            <td>Winner:</td>
+                            <td>
+                            <?php
+                                $s = "SELECT * FROM LoginTable";
+                                $t = mysqli_query($db,$s);
+                                echo "<select name='winnerSelect' id='winnerSelect'>";
+                                echo "<option>(select an account)</option>";
+                                while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+                                    $name                   = $r[ "Name" ];
+                                    echo "<option value='";
+                                    echo $name."'>";
+                                    echo $name."</option>";
+                                }
+                                echo "</select>";
+                             ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Winning Fighter:</td>
+                            <td>
+                            <?php
+                                $s = "SELECT * FROM SmashCharacterTable";
+                                $t = mysqli_query($db,$s);
+                                echo "<select name='winningCharacterSelect' id='winningCharacterSelect'>";
+                                echo "<option>(select an account)</option>";
+                                while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+                                    $fighter                   = $r[ "Fighter" ];
+                                    echo "<option value='";
+                                    echo $fighter."'>";
+                                    echo $fighter."</option>";
+                                }
+                                echo "</select>";
+                             ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Loser:</td>
+                            <td>
+                            <?php
+                                $s = "SELECT * FROM LoginTable";
+                                $t = mysqli_query($db,$s);
+                                echo "<select name='loserSelect' id='loserSelect'>";
+                                echo "<option>(select an account)</option>";
+                                while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+                                    $name                   = $r[ "Name" ];
+                                    echo "<option value='";
+                                    echo $name."'>";
+                                    echo $name."</option>";
+                                }
+                                echo "</select>";
+                             ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Losing Fighter:</td>
+                            <td>
+                            <?php
+                                $s = "SELECT * FROM SmashCharacterTable";
+                                $t = mysqli_query($db,$s);
+                                echo "<select name='losingCharacterSelect' id='losingCharacterSelect'>";
+                                echo "<option>(select an account)</option>";
+                                while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+                                    $fighter                   = $r[ "Fighter" ];
+                                    echo "<option value='";
+                                    echo $fighter."'>";
+                                    echo $fighter."</option>";
+                                }
+                                echo "</select>";
+                             ?>
+                            </td>
+                        </tr>
+                    </table>
+                     <input type = submit value = "Submit Results">
+                  </form>
               </div>
               <!-- single-blog end -->
             </div>

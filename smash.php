@@ -201,7 +201,7 @@
               <div class="clear">
                 <h4>Smash Entries</h4>
                 <hr>
-                <div>Your current ranking is: NUMBER</div>
+                <?php echo "<div>Your current ranking is:".$ranking."</div>"; ?>
                 <div>
                     <ul>
         <?php
