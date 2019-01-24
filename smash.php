@@ -20,36 +20,7 @@
                 </script>";
                 exit();
             }
-            //creates datetime object, then record in it database
-            date_default_timezone_set('America/New_York');
-            $dateTime = date("Y-m-d H:i:s");
-            $email = $_SESSION['email'];
-            $name = $_SESSION["name"];
-            
-            $s = "UPDATE LoginTable SET LastLogin='$dateTime' WHERE Email = '$email'"; 
-            $t = mysqli_query($db,$s);
 
-            //Positions
-            $EA = false;
-            $EDA = false;
-            $Warden = false;
-            $MemberEd = false;
-            $Recorder = false;
-            $Treasurer = false;
-            $Herald = false;
-            $Health = false;
-            $Recruitment = false;
-            $Scholarship = false;
-
-            //End Positions
-            
-            /*if ($permissions == "S") {
-                $Scholarship = true;
-            }
-            if ($permissions == "T") {
-                $Treasurer = true;
-                $_SESSION['treasurer'] = true;
-            }*/
         ?>
 <!------------------------------------------------------------------->
 
@@ -132,9 +103,6 @@
                     <a class="page-scroll" href="#home">Home</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="changepassword.php">Change Password</a>
-                  </li>
-                  <li>
                     <a class="page-scroll" href="memberlogout.php">Logout</a>
                   </li>
                 </ul>
@@ -162,7 +130,7 @@
                 <h1 class="title2">Phi Alpha, <?php echo $name ?>. </h1>
               </div>
               <div class="layer3 wow zoomInUp" data-wow-duration="2s" data-wow-delay="1s">
-                <h2 class="title3">Welcome to the Members-only section</h2>
+                <h2 class="title3">Welcome to the Smash Portal!</h2>
               </div>
             </div>
           </div>
@@ -183,28 +151,36 @@
              
             </div>
             <div class="single-blog-page">
-              <div class="left-blog">
-                  
-<!--Documents and Links Section-->
-                <h4>Documents/Links</h4>
-                <!--Redirects to documentredirect.php, which with get with post which document and then redirect to appropriate document-->
-                <form action = "/documentredirect.php" method = "post" name=documentForm id=documentForm>
-                    <?php
-                        $s = "SELECT * FROM FilesForWebsite";
-                        $t = mysqli_query($db,$s);
-                        echo "<select name='documentsSelect' id='documentsSelect'>";
-                        echo "<option value='none'>(select a document to view)</option>";
-                        while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
-                            $name                   = $r[ "Filename" ];
-                            echo "<option value='";
-                            echo $name."'>";
-                            echo $name."</option>";
-                        }
-                        echo "</select>";
-                    ?>
-                    <input type = submit value = "View">
-                </form>
-                <li><a href="/smash.php">Smash Portal</a></li>
+              <div class="left-tags blog-tags">
+                <div class="popular-tag left-side-tags left-blog">
+                  <h4>Popular Topics</h4>
+                  <ul>
+                    <li>
+                      <a href="https://sae.net" target="_blank">SAE</a>
+                    </li>
+                    <li>
+                      <a href="https://sae.net" target="_blank">TG</a>
+                    </li>
+                    <li>
+                      <a href="https://sae.net" target="_blank">Gentlemen</a>
+                    </li>
+                    <li>
+                      <a href="https://sae.net" target="_blank">Phi Alpha</a>
+                    </li>
+                    <li>
+                      <a href="https://sae.net" target="_blank">Sigma</a>
+                    </li>
+                    <li>
+                      <a href="https://sae.net" target="_blank">Alpha</a>
+                    </li>
+                    <li>
+                      <a href="https://sae.net" target="_blank">Epsilon</a>
+                    </li>
+                    <li>
+                      <a href="https://sae.net" target="_blank">NJIT</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -215,13 +191,16 @@
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
               <!-- single-blog start -->
-              <div class="clear"></div>
-                <!-- begin wwww.htmlcommentbox.com -->
-                 <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Form</a> is loading comments...</div>
-                 <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
-                 <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24TLObCwU.tyGOo6t.hUc1u1"+"&opts=16862&num=50&ts=1540953263416");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
-                <!-- end www.htmlcommentbox.com -->
-                
+              <div class="clear">
+                <h4>Smash Entries</h4>
+                <span>Current Champion:CHAMPION</span>
+                <span>Current Loser:CHAMPION</span>
+                <table>
+                    <tr>
+                        <td></td>
+                    </tr>  
+                </table>
+              </div>
               <!-- single-blog end -->
             </div>
           </div>
