@@ -26,7 +26,12 @@
             $email = $_SESSION['email'];
             $name = $_SESSION["name"];
             $ranking = $_SESSION["ranking"];
-
+            
+//beta testing alert
+            echo"
+                <script>
+                    alert(\"The smash portal is still in beta. Please bare with me. -Todd\");
+                </script>";
         ?>
 <!------------------------------------------------------------------->
 
