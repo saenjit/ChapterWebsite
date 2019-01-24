@@ -26,7 +26,7 @@
         ?>
 <!------------------------------------------------------------------->
 <?php
-    $s = "INSERT INTO LoginTable VALUES ('$name','$email','','','','','')"; 
+    $s = "INSERT INTO LoginTable VALUES ('$name','$email','','','','','999')"; 
     $t = mysqli_query($db,$s) or die("Adding a member failed.");
     echo"
         <script>
