@@ -202,7 +202,10 @@
               <div class="clear" id="list">
                 <h4>Smash Entries</h4>
                 <hr>
-                <?php echo "<div>Your current ranking is:".$ranking."</div>"; ?>
+                <?php if ($ranking != ''){
+                    echo "<div>Your current ranking is:".$ranking."</div>"; 
+                }
+                ?>
                 <div>
                     <ul>
         <?php
