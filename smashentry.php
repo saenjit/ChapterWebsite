@@ -228,7 +228,7 @@
                                 $s = "SELECT * FROM SmashCharacterTable";
                                 $t = mysqli_query($db,$s);
                                 echo "<select name='winningCharacterSelect' id='winningCharacterSelect'>";
-                                echo "<option>(select an account)</option>";
+                                echo "<option>(select a fighter)</option>";
                                 while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                                     $fighter                   = $r[ "Fighter" ];
                                     echo "<option value='";
@@ -264,7 +264,7 @@
                                 $s = "SELECT * FROM SmashCharacterTable";
                                 $t = mysqli_query($db,$s);
                                 echo "<select name='losingCharacterSelect' id='losingCharacterSelect'>";
-                                echo "<option>(select an account)</option>";
+                                echo "<option>(select a fighter)</option>";
                                 while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                                     $fighter                   = $r[ "Fighter" ];
                                     echo "<option value='";
