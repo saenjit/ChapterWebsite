@@ -153,31 +153,25 @@
             <div class="single-blog-page">
               <div class="left-tags blog-tags">
                 <div class="popular-tag left-side-tags left-blog">
-                  <h4>Popular Topics</h4>
+                  <h4>Power Rankings</h4>
                   <ul>
                     <li>
-                      <a href="https://sae.net" target="_blank">SAE</a>
+                      Current Champion: CHAMPION
                     </li>
                     <li>
-                      <a href="https://sae.net" target="_blank">TG</a>
+                      2) Number2
                     </li>
                     <li>
-                      <a href="https://sae.net" target="_blank">Gentlemen</a>
+                      3) Number3
                     </li>
                     <li>
-                      <a href="https://sae.net" target="_blank">Phi Alpha</a>
+                      4) Number4
                     </li>
                     <li>
-                      <a href="https://sae.net" target="_blank">Sigma</a>
+                      5) Number5
                     </li>
                     <li>
-                      <a href="https://sae.net" target="_blank">Alpha</a>
-                    </li>
-                    <li>
-                      <a href="https://sae.net" target="_blank">Epsilon</a>
-                    </li>
-                    <li>
-                      <a href="https://sae.net" target="_blank">NJIT</a>
+                      Current Loser: Loser
                     </li>
                   </ul>
                 </div>
