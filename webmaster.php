@@ -202,6 +202,8 @@
                     #deleteMember {display: none;}
                     #enableAccount {display: none;}
                     #changeContactEmail {display: none;}
+                    #enableSmashAccess {display: none;}
+                    #disableSmashAccess {display: none;}
                 </style> 
 
                 <script>
@@ -214,6 +216,8 @@
                         deleteMemberPointer = document.getElementById("deleteMember")
                         enableAccountPointer = document.getElementById("enableAccount")
                         changeContactEmailPointer = document.getElementById("changeContactEmail")
+                        enableSmashAccessPointer = document.getElementById("enableSmashAccess")
+                        disableSmashAccessPointer = document.getElementById("disableSmashAccess")
                         dropDownMenu = document.getElementById("webmasterTools")
                         $toolChoice = dropDownMenu.value
 
@@ -228,6 +232,8 @@
                                 deleteMemberPointer.style.display = "none"
                                 enableAccountPointer.style.display = "none"
                                 changeContactEmailPointer.style.display = "none"
+                                enableSmashAccessPointer.style.display = "none"
+                                disableSmashAccessPointer.style.display = "none"
                                 break;
                             case "2":
                                 addMemberPointer.style.display = "none"
@@ -238,6 +244,8 @@
                                 deleteMemberPointer.style.display = "none"
                                 enableAccountPointer.style.display = "none"
                                 changeContactEmailPointer.style.display = "none"
+                                enableSmashAccessPointer.style.display = "none"
+                                disableSmashAccessPointer.style.display = "none"
                                 break;
                             case "3":
                                 addMemberPointer.style.display = "none"
@@ -248,6 +256,8 @@
                                 deleteMemberPointer.style.display = "none"
                                 enableAccountPointer.style.display = "none"
                                 changeContactEmailPointer.style.display = "none"
+                                enableSmashAccessPointer.style.display = "none"
+                                disableSmashAccessPointer.style.display = "none"
                                 break;
                             case "4":
                                 addMemberPointer.style.display = "none"
@@ -258,6 +268,8 @@
                                 deleteMemberPointer.style.display = "none"
                                 enableAccountPointer.style.display = "none"
                                 changeContactEmailPointer.style.display = "none"
+                                enableSmashAccessPointer.style.display = "none"
+                                disableSmashAccessPointer.style.display = "none"
                                 break;
                             case "5":
                                 addMemberPointer.style.display = "none"
@@ -268,6 +280,8 @@
                                 deleteMemberPointer.style.display = "none"
                                 enableAccountPointer.style.display = "none"
                                 changeContactEmailPointer.style.display = "none"
+                                enableSmashAccessPointer.style.display = "none"
+                                disableSmashAccessPointer.style.display = "none"
                                 break;
                             case "6":
                                 addMemberPointer.style.display = "none"
@@ -278,6 +292,8 @@
                                 deleteMemberPointer.style.display = "block"
                                 enableAccountPointer.style.display = "none"
                                 changeContactEmailPointer.style.display = "none"
+                                enableSmashAccessPointer.style.display = "none"
+                                disableSmashAccessPointer.style.display = "none"
                                 break;
                             case "7":
                                 addMemberPointer.style.display = "none"
@@ -288,6 +304,8 @@
                                 deleteMemberPointer.style.display = "none"
                                 enableAccountPointer.style.display = "block"
                                 changeContactEmailPointer.style.display = "none"
+                                enableSmashAccessPointer.style.display = "none"
+                                disableSmashAccessPointer.style.display = "none"
                                 break;
                             case "8":
                                 addMemberPointer.style.display = "none"
@@ -298,6 +316,32 @@
                                 deleteMemberPointer.style.display = "none"
                                 enableAccountPointer.style.display = "none"
                                 changeContactEmailPointer.style.display = "block"
+                                enableSmashAccessPointer.style.display = "none"
+                                disableSmashAccessPointer.style.display = "none"
+                                break;
+                            case "9":
+                                addMemberPointer.style.display = "none"
+                                checkLastLoginPointer.style.display = "none"
+                                resetPasswordPointer.style.display = "none"
+                                disableAccountPointer.style.display = "none"
+                                checkActiveAccountsPointer.style.display = "none"
+                                deleteMemberPointer.style.display = "none"
+                                enableAccountPointer.style.display = "none"
+                                changeContactEmailPointer.style.display = "none"
+                                enableSmashAccessPointer.style.display = "block"
+                                disableSmashAccessPointer.style.display = "none"
+                                break;
+                            case "10":
+                                addMemberPointer.style.display = "none"
+                                checkLastLoginPointer.style.display = "none"
+                                resetPasswordPointer.style.display = "none"
+                                disableAccountPointer.style.display = "none"
+                                checkActiveAccountsPointer.style.display = "none"
+                                deleteMemberPointer.style.display = "none"
+                                enableAccountPointer.style.display = "none"
+                                changeContactEmailPointer.style.display = "none"
+                                enableSmashAccessPointer.style.display = "none"
+                                disableSmashAccessPointer.style.display = "block"
                                 break;
                             default:
                                 addMemberPointer.style.display = "none"
@@ -308,6 +352,8 @@
                                 deleteMemberPointer.style.display = "none"
                                 enableAccountPointer.style.display = "none"
                                 changeContactEmailPointer.style.display = "none"
+                                enableSmashAccessPointer.style.display = "none"
+                                disableSmashAccessPointer.style.display = "none"
                         }
                     }
                 </script>
@@ -330,6 +376,8 @@
                                <option value = "3">Reset a Password</option>
                                <option value = "4">Disable an Account</option>
                                <option value = "7">Enable an Account</option>
+                               <option value = "9">Enable Smash Access</option>
+                               <option value = "10">Disable Smash Access</option>
                                <option value = "8">Change Contact Form Email</option>
                              </select>
                           </p>
@@ -491,6 +539,46 @@
                                 echo "</select>";
                             ?>
                             <input type = submit value = "Select this Account">
+                        </form>
+                    </div>
+                <!--Enable Smash Access-->
+                    <div id = "enableSmashAccess">
+                        Select an account to make the contact form point it to.
+                        <form action = "/webmastertools/smashaccess.php" method = "post" name=enableSmashAccess id=enableSmashAccess>
+                            <?php
+                                $s = "SELECT * FROM LoginTable";
+                                $t = mysqli_query($db,$s);
+                                echo "<select name='enableSmashAccessSelect' id='enableSmashAccessSelect'>";
+                                echo "<option>(select an account)</option>";
+                                while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+                                    $name                   = $r[ "Name" ];
+                                    echo "<option value='";
+                                    echo $name."'>";
+                                    echo $name."</option>";
+                                }
+                                echo "</select>";
+                            ?>
+                            <input type = submit value = "Enable Smash Access">
+                        </form>
+                    </div>
+                <!--Disable Smash Access-->
+                    <div id = "disableSmashAccess">
+                        Select an account to make the contact form point it to.
+                        <form action = "/webmastertools/smashaccess.php" method = "post" name=disableSmashAccess id=disableSmashAccess>
+                            <?php
+                                $s = "SELECT * FROM LoginTable";
+                                $t = mysqli_query($db,$s);
+                                echo "<select name='disableSmashAccessSelect' id='disableSmashAccessSelect'>";
+                                echo "<option>(select an account)</option>";
+                                while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+                                    $name                   = $r[ "Name" ];
+                                    echo "<option value='";
+                                    echo $name."'>";
+                                    echo $name."</option>";
+                                }
+                                echo "</select>";
+                            ?>
+                            <input type = submit value = "Disable Smash Access">
                         </form>
                     </div>
               <!-- single-blog end -->
