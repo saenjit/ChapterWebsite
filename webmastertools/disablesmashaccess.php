@@ -20,14 +20,14 @@
                 </script>";
                 exit();
             }
-            $name = $_POST['enableSmashAccessSelect'];
+            $name = $_POST['disableSmashAccessSelect'];
 
         ?>
 <!------------------------------------------------------------------->
 <?php
     
     $s = "UPDATE LoginTable SET SmashAccess = 'no' WHERE Name = '$name'"; 
-    $t = mysqli_query($db,$s) or die("Enabling smash access failed.");
+    $t = mysqli_query($db,$s) or die("Disabling smash access failed.");
     echo"
         <script>
             alert(\"Successfully disabled smash access.\");
