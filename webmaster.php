@@ -543,7 +543,7 @@
                     </div>
                 <!--Enable Smash Access-->
                     <div id = "enableSmashAccess">
-                        Select an account to make the contact form point it to.
+                        Select an account to enable smash acceess.
                         <form action = "/webmastertools/smashaccess.php" method = "post" name=enableSmashAccess id=enableSmashAccess>
                             <?php
                                 $s = "SELECT * FROM LoginTable";
@@ -563,7 +563,7 @@
                     </div>
                 <!--Disable Smash Access-->
                     <div id = "disableSmashAccess">
-                        Select an account to make the contact form point it to.
+                        Select an account to disable smash acceess.
                         <form action = "/webmastertools/smashaccess.php" method = "post" name=disableSmashAccess id=disableSmashAccess>
                             <?php
                                 $s = "SELECT * FROM LoginTable";
