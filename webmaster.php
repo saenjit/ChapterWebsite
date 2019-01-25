@@ -544,7 +544,7 @@
                 <!--Enable Smash Access-->
                     <div id = "enableSmashAccess">
                         Select an account to enable smash access.
-                        <form action = "/webmastertools/enablesmashaccess.php" method = "post" name=enableSmashAccess id=enableSmashAccess>
+                        <form action = "/webmastertools/enablesmashaccess.php" method = "post" name=enableSmashAccess id=enableSmashAccess style="display:block;">
                             <?php
                                 $s = "SELECT * FROM LoginTable";
                                 $t = mysqli_query($db,$s);
@@ -564,7 +564,7 @@
                 <!--Disable Smash Access-->
                     <div id = "disableSmashAccess">
                         Select an account to disable smash access.
-                        <form action = "/webmastertools/disablesmashaccess.php" method = "post" name=disableSmashAccess id=disableSmashAccess>
+                        <form action = "/webmastertools/disablesmashaccess.php" method = "post" name=disableSmashAccess id=disableSmashAccess style="display:block;">
                             <?php
                                 $s = "SELECT * FROM LoginTable";
                                 $t = mysqli_query($db,$s);
