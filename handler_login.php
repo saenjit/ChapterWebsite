@@ -53,7 +53,7 @@
             while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                 $active 				= $r[ "Active" ];
                 $name                   = $r[ "Name" ];
-                $smashAccess            = $r[ "smashaccess" ];
+                $smashAccess            = $r[ "SmashAccess" ];
                 
             }
 
