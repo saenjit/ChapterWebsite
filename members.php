@@ -25,7 +25,6 @@
             $dateTime = date("Y-m-d H:i:s");
             $email = $_SESSION['email'];
             $name = $_SESSION["name"];
-            $ranking = $_SESSION["ranking"];
             
             $s = "UPDATE LoginTable SET LastLogin='$dateTime' WHERE Email = '$email'"; 
             $t = mysqli_query($db,$s);

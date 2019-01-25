@@ -20,6 +20,15 @@
                 </script>";
                 exit();
             }
+            if (!$_SESSION['smashaccess']){
+                echo"
+                <script>
+                    alert(\"You do not have smash access. Please request it from the ~Webmaster~.\");
+                    window.location.replace(\"http://saenjit.com/smash.php\");
+                </script>";
+                exit();
+            }
+            
             //creates datetime object and grabs email and name
             date_default_timezone_set('America/New_York');
             $dateTime = date("Y-m-d H:i:s");

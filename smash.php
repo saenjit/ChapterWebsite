@@ -25,7 +25,6 @@
             $dateTime = date("Y-m-d H:i:s");
             $email = $_SESSION['email'];
             $name = $_SESSION["name"];
-            $ranking = $_SESSION["ranking"];
             
 //beta testing alert
             echo"

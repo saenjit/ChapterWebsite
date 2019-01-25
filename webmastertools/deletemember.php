@@ -27,6 +27,9 @@
 <?php
     $s = "DELETE FROM LoginTable WHERE Name = '$name'"; 
     $t = mysqli_query($db,$s) or die("Deleting member failed.");
+
+    $s = "DELETE FROM SmashMemberTable WHERE Name = '$name'"; 
+    $t = mysqli_query($db,$s) or die("Deleting smash table member failed.");
     echo"
         <script>
             alert(\"Member successfully deleted.\");
