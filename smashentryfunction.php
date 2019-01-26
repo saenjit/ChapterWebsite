@@ -52,10 +52,10 @@
             $t = mysqli_query($db,$s) or die("Updating Character Stats Failed");
 
             //updates member rankings
-            $s = "UPDATE SmashMemberTable SET Wins = Wins + 1 WHERE Name = '$name'";
+            $s = "UPDATE SmashMemberTable SET Wins = Wins + 1 WHERE Name = '$winner'";
             $t = mysqli_query($db,$s) or die("Updating Member Stats Failed");
 
-            $s = "UPDATE SmashMemberTable SET Losses = Losses + 1 WHERE Name = '$name'";
+            $s = "UPDATE SmashMemberTable SET Losses = Losses + 1 WHERE Name = '$loser'";
             $t = mysqli_query($db,$s) or die("Updating Member Stats Failed");
 
             echo"
