@@ -253,7 +253,7 @@ $rankLoser='Loser';
                     }
                     $arrlength = count($entries);
 
-                    for($x = $arrlength; $x >= 0; $x--) {
+                    for($x = $arrlength-1; $x >= 0; $x--) {
                         echo $entries[$x];
                     }
         ?>
