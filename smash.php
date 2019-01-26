@@ -226,9 +226,18 @@ $rankLoser='Loser';
               <div class="clear" id="list">
                 <h4>Smash Entries (beta)</h4>
                 <hr>
-                <?php if ($rank != ''){
+                <?php 
+            //displays rank
+                  $s = "SELECT * FROM SmashMemberTable WHERE Name='$name'";
+                  $t = mysqli_query($db,$s) or die("Error loading SQL Table.");
+                  while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+                        $rank                  = $r[ "Rank" ];
+                  }
+                  
+                  if ($rank != ''){
                     echo "<div>Your current ranking is:".$rank."</div>"; 
-                }
+                  }
+                  //end rank
                 ?>
                 <div>
                     <ul>
