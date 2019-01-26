@@ -29,7 +29,7 @@
     $s = "INSERT INTO LoginTable VALUES ('$name','$email','','','','','no')"; 
     $t = mysqli_query($db,$s) or die("Adding a member failed.");
 
-    $s = "INSERT INTO SmashMemberTable VALUES ('$name',0,0)"; 
+    $s = "INSERT INTO SmashMemberTable VALUES ('$name',0,0,999)"; 
     $t = mysqli_query($db,$s) or die("Adding a member to smash table failed.");
     echo"
         <script>
