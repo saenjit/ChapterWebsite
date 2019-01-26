@@ -2,8 +2,8 @@
         <?php
             session_set_cookie_params(600);
             session_start();
-            //error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
-            //ini_set('display_errors' , 1);
+            error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+            ini_set('display_errors' , 1);
             
             include ("sqlaccount.php") ;
 
@@ -224,7 +224,7 @@ $rankLoser='Loser';
             <div class="col-md-12 col-sm-12 col-xs-12">
               <!-- single-blog start -->
               <div class="clear" id="list">
-                <h4>Smash Entries</h4>
+                <h4>Smash Entries (beta)</h4>
                 <hr>
                 <?php if ($rank != ''){
                     echo "<div>Your current ranking is:".$rank."</div>"; 
@@ -235,7 +235,11 @@ $rankLoser='Loser';
         <?php
                     $s = "SELECT * FROM SmashRankingsTable";
                     $t = mysqli_query($db,$s) or die("Error loading SQL Table.");
-
+                    
+                    //array for printing
+                    $entries = array();
+                    $counter = 0;
+                    
                     while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                         $winner                   = $r[ "Winner" ];
                         $winningCharacter		  = $r[ "WinningCharacter" ];
@@ -243,8 +247,14 @@ $rankLoser='Loser';
                         $losingCharacter		  = $r[ "LosingCharacter" ];
                         $dateOfMatch    		  = $r[ "Date" ];
                         $enteredBy                = $r[ "EnteredBy" ];
-                        echo "<li><span style='color:#7851A9;'>".$winner."</span> as <span style='color: #cfb53b;'>".$winningCharacter."</span> defeated <span style='color:#7851A9;'>".$loser."</span> as <span style='color: #cfb53b;'>".$losingCharacter."</span> on <b>".$dateOfMatch."</b> (entered by: ".$enteredBy.").</li>";
-                        echo "<hr>";
+                        
+                        $entries[$counter] = "<li><span style='color:#7851A9;'>".$winner."</span> as <span style='color: #cfb53b;'>".$winningCharacter."</span> defeated <span style='color:#7851A9;'>".$loser."</span> as <span style='color: #cfb53b;'>".$losingCharacter."</span> on <b>".$dateOfMatch."</b> (entered by: ".$enteredBy.").</li><hr>";
+                        $counter += 1;
+                    }
+                    $arrlength = count($entries);
+
+                    for($x = $arrlength; $x >= 0; $x--) {
+                        echo $entries[$x];
                     }
         ?>
                     </ul>
