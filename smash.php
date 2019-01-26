@@ -226,15 +226,17 @@ $rankLoser='Loser';
               <div class="clear" id="list">
                 <h4>Smash Entries (beta)</h4>
                 <?php 
-            //displays rank
+            //displays rank, wins and losses
                   $s = "SELECT * FROM SmashMemberTable WHERE Name='$name'";
                   $t = mysqli_query($db,$s) or die("Error loading SQL Table.");
                   while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                         $rank                  = $r[ "Rank" ];
+                        $wins                  = $r[ "Wins" ];
+                        $losses                = $r[ "Losses" ];
                   }
                   
                   if ($rank != ''){
-                    echo "<div>Your current ranking is: <span style='color:#7851A9;'>".$rank."</span></div>"; 
+                    echo "<div>Your current ranking is: <b>".$rank."</b> <span style='color:#7851A9;'>Wins:</span> ".$wins." <span style='color: #cfb53b;'>Losses:</span ".$losses."</div>"; 
                   }
                   //end rank
                 ?>

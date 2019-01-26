@@ -50,6 +50,14 @@
 
             $s = "UPDATE SmashCharacterTable SET Loses = Loses + 1 WHERE Fighter = '$losingCharacter'";
             $t = mysqli_query($db,$s) or die("Updating Character Stats Failed");
+
+            //updates member rankings
+            $s = "UPDATE SmashMemberTable SET Wins = Wins + 1 WHERE Name = '$name'";
+            $t = mysqli_query($db,$s) or die("Updating Member Stats Failed");
+
+            $s = "UPDATE SmashMemberTable SET Losses = Losses + 1 WHERE Name = '$name'";
+            $t = mysqli_query($db,$s) or die("Updating Member Stats Failed");
+
             echo"
                 <script>
                     alert(\"Entry successfully added. Your name has been recorded as well. Thank you!\");
