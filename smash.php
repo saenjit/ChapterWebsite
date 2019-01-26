@@ -242,6 +242,7 @@ $rankLoser='Loser';
                 <div>
                     <ul>
         <?php
+            //display entries
                     $s = "SELECT * FROM SmashRankingsTable";
                     $t = mysqli_query($db,$s) or die("Error loading SQL Table.");
                     
@@ -265,6 +266,7 @@ $rankLoser='Loser';
                     for($x = $arrlength-1; $x >= 0; $x--) {
                         echo $entries[$x];
                     }
+            //end display entries
         ?>
                     </ul>
                </div>
