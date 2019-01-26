@@ -234,7 +234,7 @@ $rankLoser='Loser';
                   }
                   
                   if ($rank != ''){
-                    echo "<div>Your current ranking is:".$rank."</div>"; 
+                    echo "<div>Your current ranking is: <span style='color:#7851A9;'>".$rank."</span></div>"; 
                   }
                   //end rank
                 ?>
