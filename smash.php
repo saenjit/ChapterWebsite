@@ -225,7 +225,6 @@ $rankLoser='Loser';
               <!-- single-blog start -->
               <div class="clear" id="list">
                 <h4>Smash Entries (beta)</h4>
-                <hr>
                 <?php 
             //displays rank
                   $s = "SELECT * FROM SmashMemberTable WHERE Name='$name'";
@@ -239,6 +238,7 @@ $rankLoser='Loser';
                   }
                   //end rank
                 ?>
+                <hr>
                 <div>
                     <ul>
         <?php
