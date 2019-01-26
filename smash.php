@@ -2,8 +2,8 @@
         <?php
             session_set_cookie_params(600);
             session_start();
-            error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
-            ini_set('display_errors' , 1);
+            //error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+            //ini_set('display_errors' , 1);
             
             include ("sqlaccount.php") ;
 
@@ -25,6 +25,7 @@
             $dateTime = date("Y-m-d H:i:s");
             $email = $_SESSION['email'];
             $name = $_SESSION["name"];
+            $smashAccess = $_SESSION['smashaccess'];
             
 //beta testing alert
            /* echo"
@@ -125,7 +126,7 @@ $rankLoser='Loser';
                     <a class="page-scroll" href="#home">Home</a>
                   </li>
                 <?php
-                    if ($_SESSION['smashaccess']){
+                    if ($smashAccess){
                       echo "<li>
                         <a class='page-scroll' href='smashentry.php'>Add Entry</a>
                       </li>";
