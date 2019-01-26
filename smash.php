@@ -27,10 +27,10 @@
             $name = $_SESSION["name"];
             
 //beta testing alert
-            echo"
+           /* echo"
                 <script>
                     alert(\"The smash portal is still in beta. Please bare with me. -Todd\");
-                </script>";
+                </script>";*/
 
 //calculate power rankings
 $rank1='1';
@@ -124,8 +124,15 @@ $rankLoser='Loser';
                   <li class="active">
                     <a class="page-scroll" href="#home">Home</a>
                   </li>
+                <?php
+                    if ($_SESSION['smashaccess']){
+                      echo "<li>
+                        <a class='page-scroll' href='smashentry.php'>Add Entry</a>
+                      </li>";
+                    }
+                ?>
                   <li>
-                    <a class="page-scroll" href="smashentry.php">Add Entry</a>
+                      <a class="page-scroll" href="/members.php">Members Portal</a>
                   </li>
                   <li>
                     <a class="page-scroll" href="memberlogout.php">Logout</a>
@@ -218,8 +225,8 @@ $rankLoser='Loser';
               <div class="clear" id="list">
                 <h4>Smash Entries</h4>
                 <hr>
-                <?php if ($ranking != ''){
-                    echo "<div>Your current ranking is:".$ranking."</div>"; 
+                <?php if ($rank != ''){
+                    echo "<div>Your current ranking is:".$rank."</div>"; 
                 }
                 ?>
                 <div>
