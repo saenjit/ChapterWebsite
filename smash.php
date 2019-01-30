@@ -53,7 +53,7 @@ while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
 }
 echo"
         <script>
-            alert(\'".$rankCounter."');
+            alert(\"".$rankCounter."\");
         </script>";
             
 //sort the array
