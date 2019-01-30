@@ -60,14 +60,15 @@ arsort($rankArray);
 //add newly ranked to the final array (names)
 $finalRankArrayCounter = 0; //counter
 foreach($rankArray as $ratio => $ratioName){
+    echo"
+        <script>
+            alert(\"".$ratioName."\");
+        </script>";
     $finalRankArray[$finalRankArrayCounter] = $ratioName;
     $finalRankArrayCounter++;
 }
 
-echo"
-        <script>
-            alert(\"".$finalRankArray[0]."\");
-        </script>";
+
 
 //final assignment to ranks in chart
 $rank1Name = $finalRankArray[0];
