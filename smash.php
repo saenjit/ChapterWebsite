@@ -1,50 +1,75 @@
 <!------------------------------AUTHENTICATION----------------------->
-        <?php
-            session_set_cookie_params(600);
-            session_start();
-            //error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
-            //ini_set('display_errors' , 1);
-            
-            include ("sqlaccount.php") ;
+<?php
+    session_set_cookie_params(600);
+    session_start();
+    //error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+    //ini_set('display_errors' , 1);
 
-            $db = mysqli_connect($hostname, $username, $password, $project);
+    include ("sqlaccount.php") ;
 
-            mysqli_select_db($db, $project); 
- 
-            //check if authenticated
-            if (!$_SESSION['login']){
-                echo"
-                <script>
-                    alert(\"Not logged in...\");
-                    window.location.replace(\"http://saenjit.com/memberlogin.html\");
-                </script>";
-                exit();
-            }
-            //creates datetime object and grabs email and name
-            date_default_timezone_set('America/New_York');
-            $dateTime = date("Y-m-d H:i:s");
-            $email = $_SESSION['email'];
-            $name = $_SESSION["name"];
-            $smashAccess = $_SESSION['smashaccess'];
-            
+    $db = mysqli_connect($hostname, $username, $password, $project);
+
+    mysqli_select_db($db, $project); 
+
+    //check if authenticated
+    if (!$_SESSION['login']){
+        echo"
+        <script>
+            alert(\"Not logged in...\");
+            window.location.replace(\"http://saenjit.com/memberlogin.html\");
+        </script>";
+        exit();
+    }
+    //creates datetime object and grabs email and name
+    date_default_timezone_set('America/New_York');
+    $dateTime = date("Y-m-d H:i:s");
+    $email = $_SESSION['email'];
+    $name = $_SESSION["name"];
+    $smashAccess = $_SESSION['smashaccess'];
+
 //beta testing alert
-           /* echo"
-                <script>
-                    alert(\"The smash portal is still in beta. Please bare with me. -Todd\");
-                </script>";*/
+   /* echo"
+        <script>
+            alert(\"The smash portal is still in beta. Please bare with me. -Todd\");
+        </script>";*/
 
 //calculate power rankings
-$rank1='1';
-$rank2='2';
-$rank3='3';
-$rank4='4';
-$rank5='5';
-$rankLoser='Loser';
+$s = "SELECT * FROM SmashMemberTable";
+$t = mysqli_query($db,$s) or die("Error loading SQL Table.");
 
+$rankCounter=0;
+while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+    $nameRank                  = $r[ "Name" ];
+    $winsRank                  = $r[ "Wins" ];
+    $lossesRank                = $r[ "Losses" ];
+    
+    if ($lossesRank != 0){
+        $rankyArray[$rankCounter] = array($winsRank/$lossesRank => $nameRank);
+    }else{
+        $rankyArray[$rankCounter] = array($winsRank/1 => $nameRank);
+    }
+    $rankCounter++;
+}
+//sort the array
+arsort($rankArray);
 
+//add final printout array
 
+//add newly ranked to the final array (names)
+$finalRankArrayCounter = 0; //counter
+foreach($rankArray as $ratio => $ratioName){
+    $finalRankArray[$finalRankArrayCounter] = $ratioName;
+}
 
-        ?>
+//final assignment to ranks in chart
+$rank1Name = $finalRankArray[0];
+$rank2Name = $finalRankArray[1];
+$rank3Name = $finalRankArray[2];
+$rank4Name = $finalRankArray[3];
+$rank5Name = $finalRankArray[4];
+$rankLoserName = $finalRankArray[count($finalRankArray) - 1];
+
+?>
 <!------------------------------------------------------------------->
 
 <!Doctype html>
@@ -189,27 +214,27 @@ $rankLoser='Loser';
                   <h4>Power Rankings</h4>
                   <ul>
                     <li>
-                      <?php echo "Current Champion: ".$rank1; ?>
+                      <?php echo "Current Champion: ".$rank1Name; ?>
                     </li>
                     <hr>
                     <li>
-                      <?php echo "2) ".$rank2; ?>
+                      <?php echo "2) ".$rank2Name; ?>
                     </li>
                     <hr>
                     <li>
-                      <?php echo "3) ".$rank3; ?>
+                      <?php echo "3) ".$rank3Name; ?>
                     </li>
                     <hr>
                     <li>
-                      <?php echo "4) ".$rank4; ?>
+                      <?php echo "4) ".$rank4Name; ?>
                     </li>
                     <hr>
                     <li>
-                      <?php echo "5) ".$rank5; ?>
+                      <?php echo "5) ".$rank5Name; ?>
                     </li>
                     <hr>
                     <li>
-                      <?php echo "Current Loser: ".$rankLoser; ?>
+                      <?php echo "Current Loser: ".$rankLoserName; ?>
                     </li>
                   </ul>
                 </div>
