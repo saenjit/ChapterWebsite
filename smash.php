@@ -51,10 +51,6 @@ while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
     }
     $rankCounter++;
 }
-echo"
-        <script>
-            alert(\"".$rankArray[0]."\");
-        </script>";
             
 //sort the array
 arsort($rankArray);
@@ -67,6 +63,11 @@ foreach($rankArray as $ratio => $ratioName){
     $finalRankArray[$finalRankArrayCounter] = $ratioName;
     $finalRankArrayCounter++;
 }
+
+echo"
+        <script>
+            alert(\"".$finalRankArray[0]."\");
+        </script>";
 
 //final assignment to ranks in chart
 $rank1Name = $finalRankArray[0];
