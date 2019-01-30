@@ -51,6 +51,11 @@ while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
     }
     $rankCounter++;
 }
+echo"
+        <script>
+            alert(\'".$rankCounter."');
+        </script>";
+            
 //sort the array
 arsort($rankArray);
 
