@@ -43,7 +43,13 @@ while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
     $winsRank                  = $r[ "Wins" ];
     $lossesRank                = $r[ "Losses" ];
     
-    $rankArray[$nameRank] = $winsRank/($winsRank + $lossesRank);
+    if($winsRank + $lossesRank != 0){
+        if ($winsRank != 0){
+            $rankArray[$nameRank] = $winsRank/($winsRank + $lossesRank);
+        }else{
+            $rankArray[$nameRank] = 0;
+        }
+    }
 }
 
             
