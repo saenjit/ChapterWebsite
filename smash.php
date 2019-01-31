@@ -44,6 +44,10 @@ while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
     $winsRank                  = $r[ "Wins" ];
     $lossesRank                = $r[ "Losses" ];
     
+    echo"
+        <script>
+            alert(\"".$nameRank.$winsRank.$lossesRank."\");
+        </script>";
     if ($lossesRank != 0){
         $rankyArray[$winsRank/$lossesRank] = $nameRank;
     }else{
@@ -60,10 +64,6 @@ arsort($rankArray);
 //add newly ranked to the final array (names)
 $finalRankArrayCounter = 0; //counter
 foreach($rankArray as $ratio => $ratioName){
-    echo"
-        <script>
-            alert(\"".$ratioName."\");
-        </script>";
     $finalRankArray[$finalRankArrayCounter] = $ratioName;
     $finalRankArrayCounter++;
 }
