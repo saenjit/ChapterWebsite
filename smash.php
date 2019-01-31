@@ -50,6 +50,10 @@ while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
             $rankArray[$nameRank] = 0;
         }
     }
+    echo"
+        <script>
+            alert(\"".$nameRank."\");
+        </script>";
 }
 
             
