@@ -54,7 +54,7 @@ while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
 
             
 //sort the array
-arsort($rankArray);
+asort($rankArray);
 
 //add final printout array
 
