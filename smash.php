@@ -78,18 +78,29 @@ foreach($rankArray as $ratioName => $ratio){
 if (count($finalRankArray) == 1){
     $rank1Name = $finalRankArray[0];
     $rankLoserName = $finalRankArray[count($finalRankArray) - 1];
+}else{
+    $rank1Name = "TBD";
+    $rankLoserName = "TBD";
 }
 if (count($finalRankArray) == 2){
     $rank2Name = $finalRankArray[1];
+}else{
+    $rank2Name = "TBD";
 }
 if (count($finalRankArray) == 3){
     $rank3Name = $finalRankArray[2];
+}else{
+    $rank3Name = "TBD";
 }
 if (count($finalRankArray) == 4){
     $rank4Name = $finalRankArray[3];
+}else{
+    $rank4Name = "TBD";
 }
 if (count($finalRankArray) == 5){
     $rank5Name = $finalRankArray[4];
+}else{
+    $rank5Name = "TBD";
 }
 
 ?>
