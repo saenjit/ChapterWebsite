@@ -62,11 +62,13 @@ arsort($rankArray);
 $finalRankArrayCounter = 0; //counter
 foreach($rankArray as $ratioName => $ratio){
     $finalRankArray[$finalRankArrayCounter] = $ratioName;
+    
+    //get current rank of player logged in
+    if ($name == $ratioName){
+        $rankLoggedInPlayer = $finalRankArrayCounter;
+    }
+    
     $finalRankArrayCounter++;
-    echo"
-        <script>
-            alert(\"".$ratioName."\");
-        </script>";
 }
 
 /*echo"
@@ -296,13 +298,12 @@ if (count($finalRankArray) < 5){
                   $s = "SELECT * FROM SmashMemberTable WHERE Name='$name'";
                   $t = mysqli_query($db,$s) or die("Error loading SQL Table.");
                   while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
-                        $rank                  = $r[ "Rank" ];
                         $wins                  = $r[ "Wins" ];
                         $losses                = $r[ "Losses" ];
                   }
                   
                   if ($rank != ''){
-                    echo "<div>Your current ranking is: <b>".$rank."</b> | <span style='color:#7851A9;'>Wins:</span> ".$wins." <span style='color: #cfb53b;'>Losses:</span> ".$losses."</div>"; 
+                    echo "<div>Your current ranking is: <b>".$rankLoggedInPlayer."</b> | <span style='color:#7851A9;'>Wins:</span> ".$wins." <span style='color: #cfb53b;'>Losses:</span> ".$losses."</div>"; 
                   }
                   //end rank
                 ?>
