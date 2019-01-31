@@ -37,22 +37,13 @@
 $s = "SELECT * FROM SmashMemberTable";
 $t = mysqli_query($db,$s) or die("Error loading SQL Table.");
 
-$rankCounter=0;
 $rankArray = array();
 while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
     $nameRank                  = $r[ "Name" ];
     $winsRank                  = $r[ "Wins" ];
     $lossesRank                = $r[ "Losses" ];
     
-    if ($lossesRank != 0){
-        $rankArray[$nameRank] = $winsRank/$lossesRank;
-        $rankCounter++;
-    }else{
-        if ($winsRank != 0){
-            $rankArray[$nameRank] = $winsRank/1;
-            $rankCounter++;
-        }
-    }
+    $rankArray[$nameRank] = $winsRank/($winsRank + $lossesRank);
 }
 
             
