@@ -68,10 +68,10 @@ foreach($rankArray as $ratioName => $ratio){
     $finalRankArrayCounter++;
 }
 
-echo"
+/*echo"
         <script>
             alert(\"".$finalRankArrayCounter."\");
-        </script>";
+        </script>";*/
 
 //final assignment to ranks in chart
 $rank1Name = $finalRankArray[0];
