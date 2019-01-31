@@ -51,10 +51,7 @@ while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
     }
     $rankCounter++;
 }
-echo"
-        <script>
-            alert(\"".$nameRank.$winsRank.$lossesRank."\");
-        </script>";
+
             
 //sort the array
 arsort($rankArray);
