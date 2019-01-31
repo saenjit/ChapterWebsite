@@ -44,17 +44,17 @@ while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
     $winsRank                  = $r[ "Wins" ];
     $lossesRank                = $r[ "Losses" ];
     
-    echo"
-        <script>
-            alert(\"".$nameRank.$winsRank.$lossesRank."\");
-        </script>";
     if ($lossesRank != 0){
-        $rankyArray[$winsRank/$lossesRank] = $nameRank;
+        $rankArray[$winsRank/$lossesRank] = $nameRank;
     }else{
-        $rankyArray[$winsRank/1] = $nameRank;
+        $rankArray[$winsRank/1] = $nameRank;
     }
     $rankCounter++;
 }
+echo"
+        <script>
+            alert(\"".$nameRank.$winsRank.$lossesRank."\");
+        </script>";
             
 //sort the array
 arsort($rankArray);
