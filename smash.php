@@ -50,10 +50,6 @@ while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
             $rankArray[$nameRank] = 0;
         }
     }
-    echo"
-        <script>
-            alert(\"".$nameRank."\");
-        </script>";
 }
 
             
@@ -67,6 +63,10 @@ $finalRankArrayCounter = 0; //counter
 foreach($rankArray as $ratioName => $ratio){
     $finalRankArray[$finalRankArrayCounter] = $ratioName;
     $finalRankArrayCounter++;
+    echo"
+        <script>
+            alert(\"".$ratioName."\");
+        </script>";
 }
 
 /*echo"
