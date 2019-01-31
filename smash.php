@@ -75,7 +75,14 @@ foreach($rankArray as $ratioName => $ratio){
         </script>";*/
 
 //final assignment to ranks in chart
-if (count($finalRankArray) < 1){
+$rank1Name = $finalRankArray[0];
+$rankLoserName = $finalRankArray[count($finalRankArray) - 1];
+$rank2Name = $finalRankArray[1];
+$rank3Name = $finalRankArray[2];
+$rank4Name = $finalRankArray[3];
+$rank5Name = $finalRankArray[4];
+
+/*if (count($finalRankArray) < 1){
     $rank1Name = $finalRankArray[0];
     $rankLoserName = $finalRankArray[count($finalRankArray) - 1];
 }else{
@@ -101,7 +108,7 @@ if (count($finalRankArray) < 5){
     $rank5Name = $finalRankArray[4];
 }else{
     $rank5Name = "TBD";
-}
+}*/
 
 ?>
 <!------------------------------------------------------------------->
