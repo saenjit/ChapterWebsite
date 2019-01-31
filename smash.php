@@ -302,9 +302,9 @@ if (count($finalRankArray) < 5){
                         $losses                = $r[ "Losses" ];
                   }
                   
-                  if ($rank != ''){
+                  
                     echo "<div>Your current ranking is: <b>".$rankLoggedInPlayer."</b> | <span style='color:#7851A9;'>Wins:</span> ".$wins." <span style='color: #cfb53b;'>Losses:</span> ".$losses."</div>"; 
-                  }
+                  
                   //end rank
                 ?>
                 <hr>
