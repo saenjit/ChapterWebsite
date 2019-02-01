@@ -65,10 +65,14 @@ foreach($rankArray as $ratioName => $ratio){
     
     //get current rank of player logged in
     if ($name == $ratioName){
-        $rankLoggedInPlayer = $finalRankArrayCounter;
+        $rankLoggedInPlayer = $finalRankArrayCounter + 1;//increment by one to get ranks that start at 1
     }
     
     $finalRankArrayCounter++;
+}
+
+if ($rankLoggedInPlayer == 0){
+    $rankLoggedInPlayer = "No Matches Played";
 }
 
 /*echo"
