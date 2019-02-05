@@ -86,7 +86,7 @@ if (!empty($finalRankArray[0])){
     $rankLoserName = $finalRankArray[count($finalRankArray) - 1];
 }else{
     $rank1Name = "TBD";
-    $rankLoserName = "TBD"
+    $rankLoserName = "TBD";
 }
 if (!empty($finalRankArray[1])){
     $rank2Name = $finalRankArray[1];
