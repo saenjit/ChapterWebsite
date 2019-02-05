@@ -81,7 +81,11 @@ if ($rankLoggedInPlayer == 0){
         </script>";*/
 
 //final assignment to ranks in chart
-$rank1Name = $finalRankArray[0];
+if (!empty($finalRankArray[0])){
+    $rank1Name = $finalRankArray[0];
+}else{
+    $rank1Name = "TBD"
+}
 $rankLoserName = $finalRankArray[count($finalRankArray) - 1];
 $rank2Name = $finalRankArray[1];
 $rank3Name = $finalRankArray[2];
