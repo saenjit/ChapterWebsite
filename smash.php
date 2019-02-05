@@ -83,14 +83,31 @@ if ($rankLoggedInPlayer == 0){
 //final assignment to ranks in chart
 if (!empty($finalRankArray[0])){
     $rank1Name = $finalRankArray[0];
+    $rankLoserName = $finalRankArray[count($finalRankArray) - 1];
 }else{
     $rank1Name = "TBD";
+    $rankLoserName = "TBD"
 }
-$rankLoserName = $finalRankArray[count($finalRankArray) - 1];
-$rank2Name = $finalRankArray[1];
-$rank3Name = $finalRankArray[2];
-$rank4Name = $finalRankArray[3];
-$rank5Name = $finalRankArray[4];
+if (!empty($finalRankArray[1])){
+    $rank2Name = $finalRankArray[1];
+}else{
+    $rank2Name = "TBD";
+}
+if (!empty($finalRankArray[2])){
+    $rank3Name = $finalRankArray[2];
+}else{
+    $rank3Name = "TBD";
+}
+if (!empty($finalRankArray[3])){
+    $rank4Name = $finalRankArray[3];
+}else{
+    $rank4Name = "TBD";
+}
+if (!empty($finalRankArray[4])){
+    $rank5Name = $finalRankArray[4];
+}else{
+    $rank5Name = "TBD";
+}
 
 /*if (count($finalRankArray) < 1){
     $rank1Name = $finalRankArray[0];
