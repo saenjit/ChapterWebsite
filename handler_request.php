@@ -38,7 +38,7 @@
             if (mysqli_num_rows($t)<1){
                 echo"
                 <script>
-                    alert(\"You are not a brother...IP Address has been reported.\");
+                    alert(\"Either you are not a brother or you typed in your email address incorrectly. Either way, your IP Address was recorded.\");
                     window.location.replace(\"http://saenjit.com/\");
                 </script>";
                 exit();
