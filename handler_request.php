@@ -81,11 +81,13 @@
             Phi Alpha,
             ~Webmaster~";
             
+            $from = "Webmaster@saenjit.com"
             $to = $email;
             $subject = "SAE NJIT Login Information";
             $message = $out;
+            $headers = "From:" . $from;
 
-            mail($to, $subject, $message);
+            mail($to, $subject, $message, $header);
             
             echo"
             <script>
