@@ -35,6 +35,84 @@
     $email = $_SESSION['email'];
     $name = $_SESSION["name"];
 
+
+
+
+//calculate power rankings
+$s = "SELECT * FROM SmashMemberTable";
+$t = mysqli_query($db,$s) or die("Error loading SQL Table.");
+
+$rankArray = array();
+while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+    $nameRank                  = $r[ "Name" ];
+    $winsRank                  = $r[ "Wins" ];
+    $lossesRank                = $r[ "Losses" ];
+    
+    if($winsRank + $lossesRank != 0){
+        if ($winsRank != 0){
+            $rankArray[$nameRank] = $winsRank/($winsRank + $lossesRank);
+        }else{
+            $rankArray[$nameRank] = 0;
+        }
+    }
+}
+
+            
+//sort the array
+arsort($rankArray);
+
+//add final printout array
+
+//add newly ranked to the final array (names)
+$finalRankArrayCounter = 0; //counter
+foreach($rankArray as $ratioName => $ratio){
+    $finalRankArray[$finalRankArrayCounter] = $ratioName;
+    
+    //get current rank of player logged in
+    if ($name == $ratioName){
+        $rankLoggedInPlayer = $finalRankArrayCounter + 1;//increment by one to get ranks that start at 1
+    }
+    
+    $finalRankArrayCounter++;
+}
+
+if (empty($rankLoggedInPlayer)){
+    $rankLoggedInPlayer = "No Matches Played";
+}
+
+/*echo"
+        <script>
+            alert(\"".$finalRankArrayCounter."\");
+        </script>";*/
+
+//final assignment to ranks in chart
+if (!empty($finalRankArray[0])){
+    $rank1Name = $finalRankArray[0];
+    $rankLoserName = $finalRankArray[count($finalRankArray) - 1];
+}else{
+    $rank1Name = "TBD";
+    $rankLoserName = "TBD";
+}
+if (!empty($finalRankArray[1])){
+    $rank2Name = $finalRankArray[1];
+}else{
+    $rank2Name = "TBD";
+}
+if (!empty($finalRankArray[2])){
+    $rank3Name = $finalRankArray[2];
+}else{
+    $rank3Name = "TBD";
+}
+if (!empty($finalRankArray[3])){
+    $rank4Name = $finalRankArray[3];
+}else{
+    $rank4Name = "TBD";
+}
+if (!empty($finalRankArray[4])){
+    $rank5Name = $finalRankArray[4];
+}else{
+    $rank5Name = "TBD";
+}
 ?>
 <!------------------------------------------------------------------->
 
@@ -173,27 +251,27 @@
                   <h4>Power Rankings</h4>
                   <ul>
                     <li>
-                      Current Champion: CHAMPION
+                      <?php echo "<b>Current Champion:</b> ".$rank1Name; ?>
                     </li>
                     <hr>
                     <li>
-                      2) Number2
+                      <?php echo "<b>2)</b> ".$rank2Name; ?>
                     </li>
                     <hr>
                     <li>
-                      3) Number3
+                      <?php echo "<b>3)</b> ".$rank3Name; ?>
                     </li>
                     <hr>
                     <li>
-                      4) Number4
+                      <?php echo "<b>4)</b> ".$rank4Name; ?>
                     </li>
                     <hr>
                     <li>
-                      5) Number5
+                      <?php echo "<b>5)</b> ".$rank5Name; ?>
                     </li>
                     <hr>
                     <li>
-                      Current Loser: Loser
+                      <?php echo "<b>Current Loser:</b> ".$rankLoserName; ?>
                     </li>
                   </ul>
                 </div>

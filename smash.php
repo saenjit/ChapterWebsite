@@ -254,27 +254,27 @@ if (!empty($finalRankArray[4])){
                   <h4>Power Rankings</h4>
                   <ul>
                     <li>
-                      <?php echo "Current Champion: ".$rank1Name; ?>
+                      <?php echo "<b>Current Champion:</b> ".$rank1Name; ?>
                     </li>
                     <hr>
                     <li>
-                      <?php echo "2) ".$rank2Name; ?>
+                      <?php echo "<b>2)</b> ".$rank2Name; ?>
                     </li>
                     <hr>
                     <li>
-                      <?php echo "3) ".$rank3Name; ?>
+                      <?php echo "<b>3)</b> ".$rank3Name; ?>
                     </li>
                     <hr>
                     <li>
-                      <?php echo "4) ".$rank4Name; ?>
+                      <?php echo "<b>4)</b> ".$rank4Name; ?>
                     </li>
                     <hr>
                     <li>
-                      <?php echo "5) ".$rank5Name; ?>
+                      <?php echo "<b>5)</b> ".$rank5Name; ?>
                     </li>
                     <hr>
                     <li>
-                      <?php echo "Current Loser: ".$rankLoserName; ?>
+                      <?php echo "<b>Current Loser:</b> ".$rankLoserName; ?>
                     </li>
                   </ul>
                 </div>
