@@ -4,13 +4,13 @@
             session_start();
             error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
             ini_set('display_errors' , 1);
-            
+
             include ("sqlaccount.php") ;
 
             $db = mysqli_connect($hostname, $username, $password, $project);
 
-            mysqli_select_db($db, $project); 
- 
+            mysqli_select_db($db, $project);
+
             //check if authenticated
             if (!$_SESSION['login']){
                 echo"
@@ -25,8 +25,8 @@
             $dateTime = date("Y-m-d H:i:s");
             $email = $_SESSION['email'];
             $name = $_SESSION["name"];
-            
-            $s = "UPDATE LoginTable SET LastLogin='$dateTime' WHERE Email = '$email'"; 
+
+            $s = "UPDATE LoginTable SET LastLogin='$dateTime' WHERE Email = '$email'";
             $t = mysqli_query($db,$s);
 
             //Positions
@@ -42,7 +42,7 @@
             $Scholarship = false;
 
             //End Positions
-            
+
             /*if ($permissions == "S") {
                 $Scholarship = true;
             }
@@ -180,14 +180,14 @@
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
           <div class="page-head-blog">
             <div class="single-blog-page">
-              
+
             </div>
             <div class="single-blog-page">
-             
+
             </div>
             <div class="single-blog-page">
               <div class="left-blog">
-                  
+
 <!--Documents and Links Section-->
                 <h4>Documents/Links</h4>
                 <!--Redirects to documentredirect.php, which with get with post which document and then redirect to appropriate document-->
@@ -217,13 +217,13 @@
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
               <!-- single-blog start -->
-              <div class="clear"></div>
+              <div class="clear">Current Points: 0</div>
                 <!-- begin wwww.htmlcommentbox.com -->
                  <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Form</a> is loading comments...</div>
                  <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
                  <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24TLObCwU.tyGOo6t.hUc1u1"+"&opts=16862&num=50&ts=1540953263416");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
                 <!-- end www.htmlcommentbox.com -->
-                
+
               <!-- single-blog end -->
             </div>
           </div>
