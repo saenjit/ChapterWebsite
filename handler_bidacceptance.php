@@ -30,7 +30,7 @@
               exit();
             }
 
-            $s = "INSERT INTO NewGuys ('$firstName', '$lastName', '$email', '$graduation')";
+            $s = "INSERT INTO NewGuys VALUES ('$firstName', '$lastName', '$email', '$graduation')";
             $t = mysqli_query($db,$s) or die("Accepting Bid Failed! Please try again or contact the ~Webmaster~!");
             echo"
                 <script>
