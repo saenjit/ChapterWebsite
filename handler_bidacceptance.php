@@ -19,7 +19,7 @@
             $graduation = $_POST['graduation'];
 
 
-
+            $token = md5($token);
             if ($token != '84454d048c03cd2e57ea3b31f7828fee'){
               echo "
               <script>
