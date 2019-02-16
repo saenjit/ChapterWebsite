@@ -92,15 +92,6 @@
                   <li class="active">
                     <a class="page-scroll" href="#home">Home</a>
                   </li>
-                  <li>
-                    <a class="page-scroll" href="smash.php">Smash Portal</a>
-                  </li>
-                  <li>
-                    <a class="page-scroll" href="changepassword.php">Change Password</a>
-                  </li>
-                  <li>
-                    <a class="page-scroll" href="memberlogout.php">Logout</a>
-                  </li>
                 </ul>
               </div>
               <!-- navbar-collapse -->
@@ -123,10 +114,10 @@
           <div class="slider-content text-center">
             <div class="header-bottom">
               <div class="layer2 wow zoomIn" data-wow-duration="1s" data-wow-delay=".4s">
-                <h1 class="title2">Phi Alpha, <?php echo $name ?>. </h1>
+                <h1 class="title2">Phi Alpha</h1>
               </div>
               <div class="layer3 wow zoomInUp" data-wow-duration="2s" data-wow-delay="1s">
-                <h2 class="title3">Welcome to the Members-only section</h2>
+                <h2 class="title3">Bids Accepted are listed below.</h2>
               </div>
             </div>
           </div>
@@ -152,22 +143,6 @@
 <!--Documents and Links Section-->
                 <h4>Documents/Links</h4>
                 <!--Redirects to documentredirect.php, which with get with post which document and then redirect to appropriate document-->
-                <form action = "/documentredirect.php" method = "post" name=documentForm id=documentForm>
-                    <?php
-                        $s = "SELECT * FROM FilesForWebsite";
-                        $t = mysqli_query($db,$s);
-                        echo "<select name='documentsSelect' id='documentsSelect'>";
-                        echo "<option value='none'>(select a document to view)</option>";
-                        while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
-                            $name                   = $r[ "Filename" ];
-                            echo "<option value='";
-                            echo $name."'>";
-                            echo $name."</option>";
-                        }
-                        echo "</select>";
-                    ?>
-                    <input type = submit value = "View">
-                </form>
               </div>
             </div>
           </div>
