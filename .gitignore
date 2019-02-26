@@ -1,2 +1,5 @@
 #remove sqlaccount from github
 sqlaccount.php
+
+#remove DS STORE
+.DS_Store
